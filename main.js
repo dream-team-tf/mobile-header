@@ -34,3 +34,16 @@ $(document).mouseup(function(e)
 	$(".cartContainer").removeClass("open");
 	}
 });
+
+
+
+
+// category filter
+
+
+
+
+
+
+
+
