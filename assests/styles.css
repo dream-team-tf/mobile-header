@@ -202,10 +202,12 @@ body {
 }
 header {
 	height: 75px;
-	left: calc(50% - 720px);
+	margin: 0 auto;
+	left: 0;
+	right: 0;
 	padding: 20px 0;
 	position: absolute;
-	max-width: 1440px;
+	max-width: 1500px;
 }
 header:before {
 	background: #083776;
@@ -213,8 +215,8 @@ header:before {
 	height: 100%;
 	position: absolute;
 		top: 0;
-		left: -720px;
-	width: calc(100vw + 720px);
+		left: -750px;
+	width: calc(100vw + 750px);
 	z-index: -1;
 }
 header #navHam {
@@ -328,7 +330,7 @@ header.fixed {
 	position: fixed;
 }
 header.fixed .logo {
-	left: 10px;
+	left: 5px;
 	max-width: 98px;
 }
 header.fixed .searchContainer, header.fixed label[for="location"] i, header.fixed select {
@@ -340,7 +342,7 @@ header.fixed .iconContainer {
 }
 header.fixed #navHam {
   top: 0;
-  left: 10px;
+  left: -10px;
 }
 header.fixed nav {
 	top: -150px;
@@ -356,8 +358,8 @@ header.fixed nav.open:before {
 	content: '';
 	height: 100%;
 	position: absolute;
-		left: -720px;
-	width: calc(100vw + 720px);
+		left: -750px;
+	width: calc(100vw + 750px);
 	z-index: -1;
 }
 header.fixed .cartContainer .phoneContainer.open {
