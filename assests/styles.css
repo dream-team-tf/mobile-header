@@ -356,8 +356,8 @@ header.fixed nav.open:before {
 	content: '';
 	height: 100%;
 	position: absolute;
-		left: -160px;
-	width: 100vw;
+		left: -720px;
+	width: calc(100vw + 720px);
 	z-index: -1;
 }
 header.fixed .cartContainer .phoneContainer.open {
