@@ -35,11 +35,14 @@ $(document).mouseup(function(e)
 	}
 });
 
-
+$("#navHam").click(function () {
+$("header nav").toggleClass("open");
+$("header .phoneContainer").toggleClass("open");
+});
 
 
 // category filter
-
+$()
 
 
 
