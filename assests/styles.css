@@ -84,11 +84,14 @@ header .logo {
 	max-width: 90px;
 }
 header nav {
+	background: #083776;
 	display: inline-block;
 	float: left;
+	position: relative;
+		left: -250px;
 }
-header nav ul {
-	display: none;
+header nav.open {
+	left: 0;
 }
 header #navHam {
 	display: inline-block;
@@ -308,7 +311,7 @@ header #navUser {
 header nav {
 	position: relative;
 		top: -37px;
-		left: 160px;
+		left: 160px!important;
 }
 header nav ul {
 	display: inline-block;
