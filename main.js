@@ -42,7 +42,13 @@ $("header .phoneContainer").toggleClass("open");
 
 
 // category filter
-$()
+$('.selectionGallery figure').on('click', function() {
+	if($(this).hasClass('treadmill')) {
+		console.log('yes')
+		$('.categoryGallery .productContainer').addClass('hide')
+		$('.categoryGallery .productContainer').hasClass('treadmill').addClass('show')
+	}
+})
 
 
 
