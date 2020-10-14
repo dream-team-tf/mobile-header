@@ -1,0 +1,387 @@
+* {
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	margin: 100px 0 0;
+}
+
+img {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.wrapper {
+	width: 80%;
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+input {
+    -webkit-border-radius:0; 
+}
+
+input[type="search"] {
+	background: #f4f4f4;
+	border: none;
+	height: 30px;
+	padding: 7px;
+	width: 100%;
+}
+
+select, option {
+	color: #000;
+	padding: 5px;
+}
+
+.fas {
+	font-size: 20px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+
+
+ul {
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	justify-content: space-between;
+}
+
+li {
+	list-style: none;
+	cursor: pointer;
+	margin: 10px 18px;
+	text-transform: uppercase;
+}
+
+li:hover,
+.fas:hover {
+	color: #ffc000;
+}
+
+p {
+	color: #000;
+}
+
+header {
+	background: #083776;
+	height: 80px;
+	position: fixed;
+		top: 0;
+	width: 100%;
+	z-index: 1;
+}
+header .headerWrapper {
+	background: #083776;
+	padding: 10px 0;
+	position: absolute;
+		top: 0;
+	width: 100%;
+	z-index: 2;
+}
+header .logo {
+	display: inline-block;
+	max-width: 90px;
+}
+header nav {
+	background: #083776;
+	display: inline-block;
+	float: left;
+	position: relative;
+		top: -200px;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+header nav.open {
+	top: 80px;
+}
+header #navHam {
+	display: inline-block;
+	float: left;
+	font-size: 30px;
+	margin-top: 5px;
+	padding: 10px;
+}
+
+header nav ul:last-of-type {
+	display: none;
+}
+header .searchContainer {
+	position: absolute;
+		right: 100%;
+		bottom: -30px;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+	width: 100%;
+}
+header .searchContainer button {
+	position: absolute;
+	color: #083776;
+	height: 30px;
+	border: none;
+	background: #f8df29;
+	padding: 0;
+	right: 0;
+}
+header .searchContainer i {
+	color: #083776;
+}
+header .searchContainer.open {
+	right: 0;
+}
+header .iconContainer {
+	display: inline-block;
+	float: right;
+	margin-top: 9px;
+}
+header .iconContainer .fas {
+	background: #1979c3;
+	border-radius: 50%;
+	padding: 6px;
+	margin-right: 10px;
+	width: 30px;
+	height: 30px;
+	font-size: 17px;
+	line-height: 32px;
+	text-align: center;
+}
+header #navUser {
+	display: none;
+}
+header .cartContainer {
+	background: #fff;
+	border: 1px solid #083776;
+	padding-bottom: 20px;
+	position: absolute;
+		top: 80px;
+		left: 100%;
+	text-align: center;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+	width: calc(100% - 2px);
+}
+header .cartContainer.open {
+	left: 0;
+}
+header .cart-wrapper {
+}
+header .cartContainer article {
+	padding: 20px;
+}
+header .cartContainer p {
+	margin: 0;
+}
+header .cartContainer hr {
+	border: none;
+	border-top: 1px solid #083776;
+	margin: 0 20px 20px;
+}
+header .cartContainer a {
+	color: #083776;
+}
+header .cartContainer .phoneContainer {
+	margin-top: 5px;
+}
+header .cartContainer .phoneContainer a {
+	margin: 0 5px;
+	text-decoration: underline;
+}
+header .cartContainer .phoneContainer i {
+	display: none;
+}
+header select {
+	background: #fff;
+	border: 1px #083776 solid;
+	margin-top: 10px;
+}
+header label[for="location"] i {
+	color: #083776;
+}
+.disable {
+	pointer-events: none;
+}
+
+@media screen and (min-width: 1440px) {
+body {
+	margin: 135px 0 0;
+}
+header, header #navHam, header .logo, header .searchContainer, header label[for="location"] i, header select, header .iconContainer {
+	-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+}
+header {
+	height: 95px;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	max-width: 1500px;
+}
+header:before {
+	background: #083776;
+	content: '';
+	height: 100%;
+	position: absolute;
+		top: 0;
+		left: -750px;
+	width: calc(100vw + 750px);
+	z-index: -1;
+}
+header .headerWrapper {
+	padding-bottom: 0;
+}
+header #navHam {
+	position: relative;
+		top: -100px;
+}
+header .logo {
+	max-width: 120px;
+	position: relative;
+		left: -20px;
+}
+header .searchContainer {
+	display: inline-block;
+	position: relative;
+		top: -50px;
+		right: unset;
+		bottom: unset;
+	width: 400px;
+}
+header .cartContainer {
+	background: none;
+	border: none;
+	display: inline-block;
+	height: 0;
+	padding: 0;
+	position: unset;
+	width: 200px;
+}
+header .cartContainer article {
+	background: #fff;
+	border: 1px solid #083776;
+	position: absolute;
+		top: -200px;
+		right: 0;
+	-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+}
+header .cartContainer.open article {
+	top: 175px;
+}
+header .cartContainer hr {
+	display: none;
+}
+header #cartAccount {
+	display: none;
+}
+header .cartContainer .phoneContainer {
+  display: none;
+}
+header .navPhoneLinks a {
+	align-items: center;
+	color: #fff;
+	display: inline-flex;
+	text-decoration: none;
+}
+header .navPhoneLinks i {
+	background: #f8df29;
+	color: #083776;
+	display: block;
+	font-size: 12px;
+	margin-right: 5px;
+	padding: 3px;
+}
+header select {
+	margin: 0;
+	position: relative;
+		top: -50px;
+}
+header label[for="location"] i {
+	color: #fff;
+	position: relative;
+		top: -50px;
+}
+header .iconContainer {
+	margin-top: 0;
+}
+header #navSearch {
+	display: none;
+}
+header #navUser {
+	display: inline-block;
+}
+header nav {
+	background: none;
+	top: 50px!important;
+	left: 160px;
+	width: calc(100vw - 160px);
+	z-index: 3;
+}
+header nav ul {
+	display: inline-block;
+}
+header nav ul:last-of-type {
+	display: inline-block;
+	float: right;
+}
+header nav ul li {
+	display: inline-block;
+	margin: 10px;
+}
+
+header.fixed {
+	height: 60px;
+}
+header.fixed .logo {
+	left: 5px;
+	max-width: 98px;
+}
+header.fixed .searchContainer {
+	margin-left: 20px;
+	top: -25px;
+}
+header.fixed label[for="location"] i, header.fixed select {
+	top: -25px;
+}
+header.fixed .iconContainer {
+  margin-top: 9px;
+}
+header.fixed #navHam {
+  top: 0;
+  left: 0;
+}
+header.fixed nav {
+	opacity: 0;
+	top: -50px!important;
+}
+header.fixed .cartContainer .phoneContainer {
+  top: -50px;
+}
+header.fixed nav.open {
+	opacity: 1;
+	top: 60px!important;
+}
+header.fixed .cartContainer .phoneContainer.open {
+	top: 63px;
+}
+header.extend {
+	height: 100px;
+}
+}
