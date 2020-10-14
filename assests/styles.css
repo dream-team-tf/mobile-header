@@ -1,3 +1,8 @@
+#emptyBox {
+	background: #083776;
+	height: 10px;
+}
+
 * {
 	font-family: 'Roboto', sans-serif;
 	color: #fff;
@@ -78,10 +83,18 @@ header {
 	position: fixed;
 		top: 0;
 	width: 100%;
+		-webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
 }
 header .logo {
 	display: inline-block;
 	max-width: 90px;
+		-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 header nav {
 	background: #083776;
@@ -89,6 +102,10 @@ header nav {
 	float: left;
 	position: relative;
 		left: -250px;
+			-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 header nav.open {
 	left: 0;
@@ -206,7 +223,7 @@ header {
 	left: 0;
 	right: 0;
 	padding: 20px 0;
-	position: absolute;
+	/*position: absolute;*/
 	max-width: 1500px;
 }
 header:before {
@@ -314,6 +331,12 @@ header nav {
 	position: relative;
 		top: -37px;
 		left: 160px!important;
+		opacity: 1;
+		z-index: 1;
+/*	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;*/
 }
 header nav ul {
 	display: inline-block;
@@ -346,6 +369,8 @@ header.fixed #navHam {
 }
 header.fixed nav {
 	top: -150px;
+	opacity: 0;
+	z-index: -1000;
 }
 header.fixed .cartContainer .phoneContainer {
   top: -50px;

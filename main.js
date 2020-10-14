@@ -1,5 +1,5 @@
 $(window).scroll(function() {
-  if (($(document).scrollTop() > 115) && ($(window).width() > 1399)) {
+  if (($(document).scrollTop() > 20) && ($(window).width() > 1399)) {
     $('header').addClass('fixed');
   }
   else {
