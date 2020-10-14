@@ -377,6 +377,12 @@ header.fixed .cartContainer .phoneContainer {
 }
 header.fixed nav.open {
 	top: -20px;
+	opacity: unset;
+	z-index: unset;
+		-webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
 }
 header.fixed nav.open:before {
 	background: #083776;
