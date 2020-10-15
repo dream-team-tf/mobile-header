@@ -246,8 +246,9 @@ header .headerWrapper {
 	padding-bottom: 0;
 }
 header #navHam {
+	opacity: 0;
 	position: relative;
-		top: -100px;
+		left: -100vw;
 }
 header .logo {
 	max-width: 120px;
@@ -365,7 +366,7 @@ header.fixed .iconContainer {
   margin-top: 9px;
 }
 header.fixed #navHam {
-  top: 0;
+  opacity: 1;
   left: 0;
 }
 header.fixed nav {
