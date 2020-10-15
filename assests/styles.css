@@ -414,3 +414,55 @@ header.extend {
 	height: 100px;
 }
 }
+
+
+
+
+
+/*grid system*/
+.wrapper {
+	border: 1px dashed red;
+}
+.box1 {
+	margin: 100px 0;
+}
+.box2,
+.box3,
+.box4 {
+	display: grid;
+	margin: 100px 0;
+}
+.box2 figure,
+.box3 figure,
+.box4 figure {
+	margin: 0;
+	border: 2px solid #dadada;
+}
+.box2 {
+	grid-template-columns: 1fr 1fr;
+}
+.box3 {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.box4 {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+@media screen and (max-width: 800px) {
+	.box4 {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media screen and (max-width: 650px) {
+	.box3 {
+		grid-template-columns: 1fr 1fr;
+	}
+	.box3 figure:last-of-type {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 500px) {
+	
+}
