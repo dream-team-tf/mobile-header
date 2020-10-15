@@ -248,7 +248,7 @@ header .headerWrapper {
 header #navHam {
 	opacity: 0;
 	position: relative;
-		left: -100vw;
+		left: -250px;
 }
 header .logo {
 	max-width: 120px;
