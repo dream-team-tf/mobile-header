@@ -87,7 +87,7 @@ header .logo {
 }
 header nav {
 	background: #083776;
-	display: inline-block;
+	/*display: inline-block;*/
 	float: left;
 	position: relative;
 		top: -200px;
@@ -96,6 +96,9 @@ header nav {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
 }
 header nav.open {
 	height: calc(100vh - 80px);
@@ -340,9 +343,13 @@ header select {
 		top: -50px;
 }
 header label[for="location"] i {
-	color: #fff;
+	/*color: #fff;*/
+	color: #f8df29;
 	position: relative;
 		top: -50px;
+}
+header label[for="location"] i:hover {
+	color: #f8df29;
 }
 header .iconContainer {
 	margin-top: 0;
