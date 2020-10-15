@@ -17,6 +17,12 @@ $("#navHam").click(function () {
 	$("header nav").addClass("open");
 	$("#navHam").addClass("disable");
 });
+
+$('header').mouseover(function() {
+	$("header").addClass("extend");
+	$("header nav").addClass("open");
+	$("#navHam").addClass("disable");
+});
 $(document).mouseup(function(e) 
 {
 	var containerS = $("header nav");
