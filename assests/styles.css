@@ -27,13 +27,7 @@ input {
     -webkit-border-radius:0; 
 }
 
-input[type="search"] {
-	background: #f4f4f4;
-	border: none;
-	height: 30px;
-	padding: 7px;
-	width: 100%;
-}
+
 
 select, option {
 	color: #000;
@@ -101,8 +95,10 @@ header nav {
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  width: 100%;
 }
 header nav.open {
+	height: calc(100vh - 80px);
 	top: 80px;
 }
 header #navHam {
@@ -119,24 +115,35 @@ header nav ul:last-of-type {
 header .searchContainer {
 	position: absolute;
 		right: 100%;
-		bottom: -30px;
+		bottom: -50px;
 	-webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 	width: 100%;
 }
-header .searchContainer button {
-	position: absolute;
-	color: #083776;
-	height: 30px;
+header input[type="search"] {
+	background: #f4f4f4;
 	border: none;
+	color: #000;
+	font-size: 18px;
+	height: 50px;
+	padding: 7px;
+	width: 100%;
+}
+header .searchContainer button {
 	background: #f8df29;
+	border: none;
+	color: #083776;
+	height: 50px;
 	padding: 0;
-	right: 0;
+	position: absolute;
+		right: 0;
+	width: 50px;
 }
 header .searchContainer i {
 	color: #083776;
+	font-size: 24px;
 }
 header .searchContainer.open {
 	right: 0;
@@ -251,6 +258,12 @@ header #navHam {
 	position: relative;
 		left: 0;
 }
+header #navHam.slower {
+	-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+}
 header .logo {
 	max-width: 120px;
 	position: relative;
@@ -263,6 +276,17 @@ header .searchContainer {
 		right: unset;
 		bottom: unset;
 	width: 400px;
+}
+header input[type="search"] {
+	font-size: 13px;
+	height: 30px;
+}
+header .searchContainer button {
+	height: 30px;
+	width: 30px;
+}
+header .searchContainer i {
+	font-size: 20px;
 }
 header .cartContainer {
 	background: none;
@@ -331,6 +355,7 @@ header #navUser {
 }
 header nav {
 	background: none;
+	height: auto!important;
 	top: 50px!important;
 	left: 160px;
 	width: calc(100vw - 160px);

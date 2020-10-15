@@ -1,10 +1,12 @@
 $(window).scroll(function() {
   if (($(document).scrollTop() > 1) && ($(window).width() > 1399)) {
     $('header').addClass('fixed');
+    $("#navHam").addClass("slower");
   }
   else {
     $('header').removeClass('fixed');
     $('header').removeClass('extend');
+    $("#navHam").removeClass("slower");
 		$("header nav").removeClass("open");
 		$("#navHam").removeClass("disable");
   }
