@@ -441,14 +441,14 @@ header.extend {
 	height: 100%;
 }
 .box1 {
-	margin: 100px 0;
+	/*margin: 100px 0;*/
 }
 .box2,
 .box3,
 .box4,
 .box6 {
 	display: grid;
-	margin: 100px 0;
+	margin: 50px 0;
 }
 .box1 figure,
 .box2 figure,
@@ -492,6 +492,9 @@ header.extend {
 	}
 }
 @media screen and (max-width: 800px) {
+	.wrapper {
+		width: 90%;
+	}
 	.box4 {
 		grid-template-columns: 1fr 1fr;
 	}

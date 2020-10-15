@@ -19,13 +19,13 @@ $("#navHam").click(function () {
 });
 
 $('header').mouseover(function() {
-	$("header").addClass("extend");
-	$("header nav").addClass("open");
+	$("header.fixed").addClass("extend");
+	$("header.fixed nav").addClass("open");
 	$("#navHam").addClass("disable");
 });
 $(document).mouseup(function(e) 
 {
-	var containerS = $("header");
+	var containerS = $("header nav");
 
 	// if the target of the click isn't the container nor a descendant of the container
 	if (!containerS.is(e.target) && containerS.has(e.target).length === 0) 
