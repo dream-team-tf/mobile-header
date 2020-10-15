@@ -423,6 +423,16 @@ header.extend {
 .wrapper {
 	border: 1px dashed red;
 }
+.box {
+	background: #d3d3d3;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
 .box1 {
 	margin: 100px 0;
 }
@@ -439,7 +449,15 @@ header.extend {
 .box4 figure,
 .box6 figure {
 	margin: 0;
+	position: relative;
 	border: 2px solid #dadada;
+}
+.box1 img,
+.box2 img,
+.box3 img,
+.box4 img,
+.box6 img {
+	visibility: hidden;
 }
 .box2 {
 	grid-template-columns: 1fr 1fr;
