@@ -1,8 +1,3 @@
-#emptyBox {
-	background: #083776;
-	height: 10px;
-}
-
 * {
 	font-family: 'Roboto', sans-serif;
 	color: #fff;
@@ -55,7 +50,7 @@ select, option {
 
 ul {
 	padding: 0;
-	margin-top: 20px;
+	margin-top: 0;
 	margin-bottom: 0;
 	justify-content: space-between;
 }
@@ -78,37 +73,37 @@ p {
 
 header {
 	background: #083776;
-	height: 60px;
-	padding: 10px 0;
+	height: 80px;
 	position: fixed;
 		top: 0;
 	width: 100%;
-		-webkit-transition: all 0.35s ease;
-    -moz-transition: all 0.35s ease;
-    -o-transition: all 0.35s ease;
-    transition: all 0.35s ease;
+	z-index: 1;
+}
+header .headerWrapper {
+	background: #083776;
+	padding: 10px 0;
+	position: absolute;
+		top: 0;
+	width: 100%;
+	z-index: 2;
 }
 header .logo {
 	display: inline-block;
 	max-width: 90px;
-		-webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
 }
 header nav {
 	background: #083776;
 	display: inline-block;
 	float: left;
 	position: relative;
-		left: -250px;
-			-webkit-transition: all 0.3s ease;
+		top: -200px;
+	-webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 header nav.open {
-	left: 0;
+	top: 80px;
 }
 header #navHam {
 	display: inline-block;
@@ -116,6 +111,10 @@ header #navHam {
 	font-size: 30px;
 	margin-top: 5px;
 	padding: 10px;
+}
+
+header nav ul:last-of-type {
+	display: none;
 }
 header .searchContainer {
 	position: absolute;
@@ -212,18 +211,25 @@ header select {
 header label[for="location"] i {
 	color: #083776;
 }
+.disable {
+	pointer-events: none;
+}
 
 @media screen and (min-width: 1440px) {
 body {
 	margin: 135px 0 0;
 }
+header, header #navHam, header .logo, header .searchContainer, header label[for="location"] i, header select, header .iconContainer {
+	-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+}
 header {
-	height: 75px;
+	height: 95px;
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	padding: 20px 0;
-	/*position: absolute;*/
 	max-width: 1500px;
 }
 header:before {
@@ -235,6 +241,9 @@ header:before {
 		left: -750px;
 	width: calc(100vw + 750px);
 	z-index: -1;
+}
+header .headerWrapper {
+	padding-bottom: 0;
 }
 header #navHam {
 	position: relative;
@@ -251,10 +260,6 @@ header .searchContainer {
 		top: -50px;
 		right: unset;
 		bottom: unset;
-	-webkit-transition: none;
-		-moz-transition: none;
-		-o-transition: none;
-		transition: none;
 	width: 400px;
 }
 header .cartContainer {
@@ -264,10 +269,6 @@ header .cartContainer {
 	height: 0;
 	padding: 0;
 	position: unset;
-	-webkit-transition: none;
-		-moz-transition: none;
-		-o-transition: none;
-		transition: none;
 	width: 200px;
 }
 header .cartContainer article {
@@ -291,16 +292,15 @@ header #cartAccount {
 	display: none;
 }
 header .cartContainer .phoneContainer {
-  position: absolute;
-  	right: 5px;
+  display: none;
 }
-header .cartContainer .phoneContainer a {
+header .navPhoneLinks a {
 	align-items: center;
 	color: #fff;
 	display: inline-flex;
 	text-decoration: none;
 }
-header .cartContainer .phoneContainer i {
+header .navPhoneLinks i {
 	background: #f8df29;
 	color: #083776;
 	display: block;
@@ -328,19 +328,19 @@ header #navUser {
 	display: inline-block;
 }
 header nav {
-	position: relative;
-		top: -37px;
-		left: 160px!important;
-		opacity: 1;
-		z-index: 1;
-/*	-webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;*/
+	background: none;
+	top: 50px!important;
+	left: 160px;
+	width: calc(100vw - 160px);
+		max-width: 1340px;
+	z-index: 3;
 }
 header nav ul {
 	display: inline-block;
-	margin: 0;
+}
+header nav ul:last-of-type {
+	display: inline-block;
+	float: right;
 }
 header nav ul li {
 	display: inline-block;
@@ -348,136 +348,41 @@ header nav ul li {
 }
 
 header.fixed {
-	height: 60px;
-	padding: 10px 0;
-	position: fixed;
+	height: 81px;
 }
 header.fixed .logo {
 	left: 5px;
 	max-width: 98px;
 }
-header.fixed .searchContainer, header.fixed label[for="location"] i, header.fixed select {
+header.fixed .searchContainer {
+	margin-left: 20px;
 	top: -25px;
-	left: 20px;
+}
+header.fixed label[for="location"] i, header.fixed select {
+	top: -25px;
 }
 header.fixed .iconContainer {
   margin-top: 9px;
 }
 header.fixed #navHam {
   top: 0;
-  left: -10px;
+  left: 0;
 }
 header.fixed nav {
-	top: -150px;
 	opacity: 0;
-	z-index: -1000;
+	top: -50px!important;
 }
 header.fixed .cartContainer .phoneContainer {
   top: -50px;
 }
 header.fixed nav.open {
-	top: -20px;
-	opacity: unset;
-	z-index: unset;
-		-webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
-    transition: none;
-}
-header.fixed nav.open:before {
-	background: #083776;
-	content: '';
-	height: 100%;
-	position: absolute;
-		left: -750px;
-	width: calc(100vw + 750px);
-	z-index: -1;
+	opacity: 1;
+	top: 60px!important;
 }
 header.fixed .cartContainer .phoneContainer.open {
 	top: 63px;
 }
+header.extend {
+	height: 100px;
 }
-
-
-
-
-
-
-
-/*grid system*/
-.wrapper {
-	border: 2px dashed red;
 }
-
-.box1,
-.box2,
-.box3,
-.box4 {
-	margin: 100px 0;
-}
-
-.box1 figure,
-.box2 figure,
-.box3 figure,
-.box4 figure {
-	border: 2px solid #dadada;
-	margin: 0;
-}
-
-.box1 img,
-.box2 img,
-.box3 img,
-.box4 img {
-	width: 100%;
-	height: 100%;
-}
-
-.box2,
-.box3,
-.box4 {
-	display: grid;
-	justify-content: center;
-	align-items: center;
-}
-
-.box2 {
-	grid-template-columns: 1fr 1fr;
-}
-.box3 {
-	grid-template-columns: 1fr 1fr 1fr;
-}
-.box4 {
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-@media screen and (max-width: 1000px) {
-	.box4 {
-		grid-template-columns: 1fr 1fr;
-	}
-}
-@media screen and (max-width: 600px) {
-	.box3 {
-		grid-template-columns: 1fr 1fr;
-	}
-	.box3 figure:last-of-type {
-		grid-column-start: 1;
-		grid-column-end: 3;
-		margin: 0 auto;
-		width: 50%;
-	}
-}
-@media screen and (max-width: 400px) {
-	.box2,
-	.box3,
-	.box4 {
-		grid-template-columns: 1fr;
-	}
-	.box3 figure:last-of-type {
-/*		grid-column-end: unset;
-		grid-column-start: unset;*/
-		width: unset;
-		/*margin: 0;*/
-	}
-}
-
-
