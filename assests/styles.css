@@ -247,6 +247,7 @@ header .headerWrapper {
 }
 header #navHam {
 	opacity: 0;
+	pointer-events: none;
 	position: relative;
 		left: -250px;
 }
@@ -367,6 +368,7 @@ header.fixed .iconContainer {
 }
 header.fixed #navHam {
   opacity: 1;
+	pointer-events: unset;
   left: 0;
 }
 header.fixed nav {
