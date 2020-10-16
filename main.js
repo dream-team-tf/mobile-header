@@ -44,9 +44,12 @@ $("header .phoneContainer").toggleClass("open");
 // category filter
 $('.selectionGallery figure').on('click', function() {
 	if($(this).hasClass('treadmill')) {
-		console.log('yes')
-		$('.categoryGallery .productContainer').addClass('hide')
-		$('.categoryGallery .productContainer').hasClass('treadmill').addClass('show')
+		console.log('treadmill')
+		// write a map/forEach function
+		// $('.categoryGallery .productContainer').addClass('hide')
+		// if($('.categoryGallery .productContainer').hasClass('treadmill')) {
+		// 	$('.categoryGallery .productContainer').addClass('chosen')
+		// }
 	}
 })
 

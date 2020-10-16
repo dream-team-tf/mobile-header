@@ -396,3 +396,7 @@ header nav ul li {
 	opacity: 0;
 	z-index: -1;
 }
+
+.chosen {
+	border: 2px solid red;
+}
