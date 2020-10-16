@@ -526,12 +526,28 @@ header.extend {
 		margin: 0 auto;
 	}
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
+	.wrapper {
+		margin: 20px;
+	}
 	.box2,
 	.box3,
 	.box4,
 	.box6 {
 		grid-template-columns: 1fr;
+	}
+	.box2,
+	.box3,
+	.box4,
+	.box6 {
+		margin: 0;
+	}
+	.box2 figure,
+	.box3 figure,
+	.box3 figure:last-of-type,
+	.box4 figure,
+	.box6 figure:not(:last-child) {
+		margin-bottom: 20px;
 	}
 	.box3 figure,
 	.box3 figure:last-of-type,
