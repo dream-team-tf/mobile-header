@@ -417,7 +417,7 @@ header.fixed .cartContainer .phoneContainer {
 }
 header.fixed nav.open {
 	opacity: 1;
-	top: 60px!important;
+	top: 70px!important;
 }
 header.fixed .cartContainer .phoneContainer.open {
 	top: 63px;
