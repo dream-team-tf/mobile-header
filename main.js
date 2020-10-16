@@ -19,9 +19,11 @@ $("#navHam").click(function () {
 });
 
 $('header').mouseover(function() {
-	$("header.fixed").addClass("extend");
-	$("header.fixed nav").addClass("open");
-	$("#navHam").addClass("disable");
+	if (($(window).width() > 1399)) {
+		$("header.fixed").addClass("extend");
+		$("header.fixed nav").addClass("open");
+		$("#navHam").addClass("disable");
+	}
 });
 $(document).mouseup(function(e) 
 {
