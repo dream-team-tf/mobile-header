@@ -225,7 +225,7 @@ header label[for="location"] i {
 	pointer-events: none;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
 body {
 	margin: 135px 0 0;
 }
@@ -354,6 +354,10 @@ header label[for="location"] i:hover {
 header .iconContainer {
 	margin-top: 0;
 }
+header .iconContainer .fas {
+	padding: 3px;
+	font-size: 15px;
+}
 header #navSearch {
 	display: none;
 }
@@ -364,9 +368,9 @@ header nav {
 	background: none;
 	height: auto!important;
 	top: 50px!important;
-	left: 160px;
-	width: calc(100vw - 160px);
-		max-width: 1340px;
+	left: 165px;
+	width: calc(100vw - 165px);
+		max-width: 1335px;
 	z-index: 3;
 }
 header nav ul {
@@ -374,11 +378,12 @@ header nav ul {
 }
 header nav ul:last-of-type {
 	display: inline-block;
-	float: right;
+	position: absolute;
+		top: 20px;
 }
 header nav ul li {
 	display: inline-block;
-	margin: 10px;
+	margin: 0 5px;
 }
 
 header.fixed {
@@ -422,7 +427,26 @@ header.extend {
 }
 }
 
-
+@media screen and (min-width: 1440px) {
+header .iconContainer .fas {
+	padding: 6px;
+	font-size: 17px;
+}
+header nav {
+	top: 60px!important;
+	left: 160px;
+	width: calc(100vw - 160px);
+		max-width: 1340px;
+}
+header nav ul:last-of-type {
+	float: right;
+	position: relative;
+    top: 0;
+}
+header nav ul li {
+	margin: 0 10px;
+}
+}
 
 
 
@@ -555,89 +579,4 @@ header.extend {
 		width: unset;
 		grid-column-start: 1;
 	}
-}
-
-
-
-
-
-/*filter category Section*/
-#category h2, 
-#category h3, 
-#category h4, 
-#category h5,
-#category label {
-	color: #000;
-}
-
-#category figure {
-	margin: 0;
-}
-
-#category section {
-	display: flex;
-}
-
-.selectionGallery,
-.categoryContainer {
-	display: grid;
-}
-
-#category h2,
-.categoryGallery,
-.selectionGallery h5 {
-	text-align: center;
-}
-
-.selectionGallery {
-	grid-template-columns: repeat(6, 1fr);
-}
-
-.categoryGallery {
-	grid-template-columns: repeat(4, 1fr);
-}
-
-.sideBar {
-	width: 400px;
-}
-
-.productContainer {
-	display: inline-block;
-	max-width: 300px;
-}
-
-.selectionGallery figure {
-	position: relative;
-	padding: 10px;
-}
-
-.selectionGallery h5 {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-/*transitions*/
-.categoryGallery .productContainer {
-	-webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.show {
-	position: unset;
-	opacity: 1;
-	z-index: 1;
-}
-
-.hide {
-	position: absolute;
-	opacity: 0;
-	z-index: -1;
-}
-
-.chosen {
-	border: 2px solid red;
 }
