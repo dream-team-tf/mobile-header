@@ -27,13 +27,7 @@ input {
     -webkit-border-radius:0; 
 }
 
-input[type="search"] {
-	background: #f4f4f4;
-	border: none;
-	height: 30px;
-	padding: 7px;
-	width: 100%;
-}
+
 
 select, option {
 	color: #000;
@@ -50,7 +44,7 @@ select, option {
 
 ul {
 	padding: 0;
-	margin-top: 20px;
+	margin-top: 0;
 	margin-bottom: 0;
 	justify-content: space-between;
 }
@@ -73,11 +67,19 @@ p {
 
 header {
 	background: #083776;
-	height: 60px;
-	padding: 10px 0;
+	height: 80px;
 	position: fixed;
 		top: 0;
 	width: 100%;
+	z-index: 1;
+}
+header .headerWrapper {
+	background: #083776;
+	padding: 10px 0;
+	position: absolute;
+		top: 0;
+	width: 100%;
+	z-index: 2;
 }
 header .logo {
 	display: inline-block;
@@ -85,13 +87,22 @@ header .logo {
 }
 header nav {
 	background: #083776;
-	display: inline-block;
+	/*display: inline-block;*/
 	float: left;
 	position: relative;
-		left: -250px;
+		top: -200px;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
 }
 header nav.open {
-	left: 0;
+	height: calc(100vh - 80px);
+	top: 80px;
 }
 header #navHam {
 	display: inline-block;
@@ -100,27 +111,42 @@ header #navHam {
 	margin-top: 5px;
 	padding: 10px;
 }
+
+header nav ul:last-of-type {
+	display: none;
+}
 header .searchContainer {
 	position: absolute;
 		right: 100%;
-		bottom: -30px;
+		bottom: -50px;
 	-webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 	width: 100%;
 }
-header .searchContainer button {
-	position: absolute;
-	color: #083776;
-	height: 30px;
+header input[type="search"] {
+	background: #f4f4f4;
 	border: none;
+	color: #000;
+	font-size: 18px;
+	height: 50px;
+	padding: 7px;
+	width: 100%;
+}
+header .searchContainer button {
 	background: #f8df29;
+	border: none;
+	color: #083776;
+	height: 50px;
 	padding: 0;
-	right: 0;
+	position: absolute;
+		right: 0;
+	width: 50px;
 }
 header .searchContainer i {
 	color: #083776;
+	font-size: 24px;
 }
 header .searchContainer.open {
 	right: 0;
@@ -195,18 +221,25 @@ header select {
 header label[for="location"] i {
 	color: #083776;
 }
+.disable {
+	pointer-events: none;
+}
 
 @media screen and (min-width: 1440px) {
 body {
 	margin: 135px 0 0;
 }
+header, header #navHam, header .logo, header .searchContainer, header label[for="location"] i, header select, header .iconContainer {
+	-webkit-transition: all 0.1s ease;
+		-moz-transition: all 0.1s ease;
+		-o-transition: all 0.1s ease;
+		transition: all 0.1s ease;
+}
 header {
-	height: 75px;
+	height: 95px;
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	padding: 20px 0;
-	position: absolute;
 	max-width: 1500px;
 }
 header:before {
@@ -219,9 +252,20 @@ header:before {
 	width: calc(100vw + 750px);
 	z-index: -1;
 }
+header .headerWrapper {
+	padding-bottom: 0;
+}
 header #navHam {
+	opacity: 0;
+	pointer-events: none;
 	position: relative;
-		top: -100px;
+		left: 0;
+}
+header #navHam.slower {
+	-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-o-transition: all 0.3s ease;
+		transition: all 0.3s ease;
 }
 header .logo {
 	max-width: 120px;
@@ -234,11 +278,18 @@ header .searchContainer {
 		top: -50px;
 		right: unset;
 		bottom: unset;
-	-webkit-transition: none;
-		-moz-transition: none;
-		-o-transition: none;
-		transition: none;
 	width: 400px;
+}
+header input[type="search"] {
+	font-size: 13px;
+	height: 30px;
+}
+header .searchContainer button {
+	height: 30px;
+	width: 30px;
+}
+header .searchContainer i {
+	font-size: 20px;
 }
 header .cartContainer {
 	background: none;
@@ -247,10 +298,6 @@ header .cartContainer {
 	height: 0;
 	padding: 0;
 	position: unset;
-	-webkit-transition: none;
-		-moz-transition: none;
-		-o-transition: none;
-		transition: none;
 	width: 200px;
 }
 header .cartContainer article {
@@ -274,16 +321,15 @@ header #cartAccount {
 	display: none;
 }
 header .cartContainer .phoneContainer {
-  position: absolute;
-  	right: 5px;
+  display: none;
 }
-header .cartContainer .phoneContainer a {
+header .navPhoneLinks a {
 	align-items: center;
 	color: #fff;
 	display: inline-flex;
 	text-decoration: none;
 }
-header .cartContainer .phoneContainer i {
+header .navPhoneLinks i {
 	background: #f8df29;
 	color: #083776;
 	display: block;
@@ -297,9 +343,13 @@ header select {
 		top: -50px;
 }
 header label[for="location"] i {
-	color: #fff;
+	/*color: #fff;*/
+	color: #f8df29;
 	position: relative;
 		top: -50px;
+}
+header label[for="location"] i:hover {
+	color: #f8df29;
 }
 header .iconContainer {
 	margin-top: 0;
@@ -311,13 +361,20 @@ header #navUser {
 	display: inline-block;
 }
 header nav {
-	position: relative;
-		top: -37px;
-		left: 160px!important;
+	background: none;
+	height: auto!important;
+	top: 50px!important;
+	left: 160px;
+	width: calc(100vw - 160px);
+		max-width: 1340px;
+	z-index: 3;
 }
 header nav ul {
 	display: inline-block;
-	margin: 0;
+}
+header nav ul:last-of-type {
+	display: inline-block;
+	float: right;
 }
 header nav ul li {
 	display: inline-block;
@@ -325,44 +382,177 @@ header nav ul li {
 }
 
 header.fixed {
-	height: 60px;
-	padding: 10px 0;
-	position: fixed;
+	height: 81px;
 }
 header.fixed .logo {
 	left: 5px;
 	max-width: 98px;
 }
-header.fixed .searchContainer, header.fixed label[for="location"] i, header.fixed select {
+header.fixed .searchContainer {
+	margin-left: 20px;
 	top: -25px;
-	left: 20px;
+}
+header.fixed label[for="location"] i, header.fixed select {
+	top: -25px;
 }
 header.fixed .iconContainer {
   margin-top: 9px;
 }
 header.fixed #navHam {
-  top: 0;
-  left: -10px;
+  opacity: 1;
+	pointer-events: unset;
+  /*left: 0;*/
 }
 header.fixed nav {
-	top: -150px;
+	opacity: 0;
+	/*top: -50px!important;*/
 }
 header.fixed .cartContainer .phoneContainer {
   top: -50px;
 }
 header.fixed nav.open {
-	top: -20px;
-}
-header.fixed nav.open:before {
-	background: #083776;
-	content: '';
-	height: 100%;
-	position: absolute;
-		left: -750px;
-	width: calc(100vw + 750px);
-	z-index: -1;
+	opacity: 1;
+	top: 60px!important;
 }
 header.fixed .cartContainer .phoneContainer.open {
 	top: 63px;
 }
+header.extend {
+	height: 100px;
+}
+}
+
+
+
+
+
+/*grid system*/
+.wrapper {
+	border: 1px dashed red;
+}
+.box {
+	background: #d3d3d3;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+.box1 {
+	/*margin: 100px 0;*/
+}
+.box2,
+.box3,
+.box4,
+.box6 {
+	display: grid;
+	margin: 50px 0;
+}
+.box1 figure,
+.box2 figure,
+.box3 figure,
+.box4 figure,
+.box6 figure {
+	margin: 0;
+	position: relative;
+	border: 2px solid #dadada;
+}
+.box1 img,
+.box2 img,
+.box3 img,
+.box4 img,
+.box6 img {
+	visibility: hidden;
+}
+.box2 {
+	grid-template-columns: 1fr 1fr;
+}
+.box3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+.box4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+.box6 {
+	grid-template-columns: repeat(6, 1fr);
+}
+@media screen and (max-width: 1300px) {
+	.box6 {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.box6 figure:nth-of-type(5) {
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+	.box6 figure:nth-of-type(6) {
+		grid-column-start: 3;
+		grid-column-end: 4;
+	}
+}
+@media screen and (max-width: 800px) {
+	.wrapper {
+		width: 90%;
+	}
+	.box4 {
+		grid-template-columns: 1fr 1fr;
+	}
+	.box6 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (max-width: 600px) {
+	.box6 {
+		grid-template-columns: 1fr 1fr;
+	}
+	.box6 figure:nth-child(odd) {
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+	.box6 figure:nth-child(even) {
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+}
+@media screen and (max-width: 650px) {
+	.box3 {
+		grid-template-columns: 1fr 1fr;
+	}
+	.box3 figure:last-of-type {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 425px) {
+	.wrapper {
+		margin: 20px;
+	}
+	.box2,
+	.box3,
+	.box4,
+	.box6 {
+		grid-template-columns: 1fr;
+	}
+	.box2,
+	.box3,
+	.box4,
+	.box6 {
+		margin: 0;
+	}
+	.box2 figure,
+	.box3 figure,
+	.box3 figure:last-of-type,
+	.box4 figure,
+	.box6 figure:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	.box3 figure,
+	.box3 figure:last-of-type,
+	.box6 figure:nth-child(even) {
+		width: unset;
+		grid-column-start: 1;
+	}
 }
