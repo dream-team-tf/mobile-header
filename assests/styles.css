@@ -461,8 +461,9 @@ header nav ul li {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	width: 100%;
-	height: 100%;
+	/*width: 100%;*/
+	/*height: 100%;*/
+	border: 1px solid #474747;
 }
 .box1 {
 	/*margin: 100px 0;*/
@@ -470,7 +471,11 @@ header nav ul li {
 .leftBox figure,
 .upperBox figure,
 .middleBox figure,
-.lowerBox figure {
+.lowerBox figure,
+.box1 figure,
+.box2 figure,
+.box3 figure,
+.box4 figure {
 	margin: 0;
 	position: relative;
 }
@@ -484,7 +489,11 @@ header nav ul li {
 .rightBox,
 .upperBox,
 .middleBox,
-.lowerBox {
+.lowerBox,
+.pyramidBox,
+.box2,
+.box3,
+.box4 {
 	display: grid;
 	grid-gap: 20px;
 }
@@ -498,7 +507,6 @@ header nav ul li {
 }
 #contentContainer {
 	grid-template-columns: 1fr 4fr;
-	/*padding: 20px;*/
 }
 .rightBox,
 .middleBox {
@@ -507,7 +515,8 @@ header nav ul li {
 .upperBox {
 	grid-template-columns: repeat(5, 1fr);
 }
-.lowerBox {
+.lowerBox,
+.box4 {
 	grid-template-columns: repeat(4, 1fr);
 }
 .leftBox figure {
@@ -515,6 +524,15 @@ header nav ul li {
 }
 .middleBox figure {
 	max-height: 125px;
+}
+.box2 {
+	grid-template-columns: 1fr 1fr;
+}
+.box3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+.box1 figure {
+	height: 300px;
 }
 @media screen and (max-width: 500px) {
 	.wrapper {
@@ -546,3 +564,14 @@ header nav ul li {
 		grid-template-columns: 1fr 1fr;
 	}
 }
+
+
+
+
+/*category styles*/
+
+
+
+
+
+
