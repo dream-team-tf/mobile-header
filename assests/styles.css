@@ -468,10 +468,7 @@ header nav ul li {
 .box1 {
 	/*margin: 100px 0;*/
 }
-.leftBox figure,
-.upperBox figure,
 .middleBox figure,
-.lowerBox figure,
 .box1 figure,
 .box2 figure,
 .box3 figure,
@@ -479,17 +476,7 @@ header nav ul li {
 	margin: 0;
 	position: relative;
 }
-.leftBox img,
-.upperBox img,
-.middleBox img,
-.lowerBox img {
-	visibility: hidden;
-}
 #contentContainer,
-.rightBox,
-.upperBox,
-.middleBox,
-.lowerBox,
 .pyramidBox,
 .box2,
 .box3,
@@ -508,19 +495,8 @@ header nav ul li {
 #contentContainer {
 	grid-template-columns: 1fr 4fr;
 }
-.rightBox,
-.middleBox {
-	grid-template-columns: 1fr;
-}
-.upperBox {
-	grid-template-columns: repeat(5, 1fr);
-}
-.lowerBox,
 .box4 {
 	grid-template-columns: repeat(4, 1fr);
-}
-.leftBox figure {
-	height: 50%;
 }
 .middleBox figure {
 	max-height: 125px;
@@ -569,9 +545,54 @@ header nav ul li {
 
 
 /*category styles*/
-
-
-
+.outerContainer h2,
+.outerContainer h3,
+.outerContainer h4,
+.outerContainer h5,
+.outerContainer label {
+	color: #000;
+	text-align: center;
+}
+.outerContainer figure {
+	margin: 0;
+}
+.outerContainer img {
+	object-fit: cover;
+}
+.lowerBox img {
+	min-height: 278px;
+}
+.upperBox,
+.lowerBox {
+	display: grid;
+	grid-gap: 20px;
+}
+.upperBox {
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(6, 1fr);
+}
+.lowerBox {
+	grid-template-columns: repeat(4, 1fr);
+}
+.upperBox figure,
+.middleBox figure {
+	position: relative;
+}
+.upperBox h5 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.middleBox {
+	padding: 20px 0;
+}
+.middleBox img {
+	visibility: hidden;
+}
+.productContainer {
+	border: 1px solid #dadada;
+}
 
 
 
