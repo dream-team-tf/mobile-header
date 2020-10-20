@@ -463,7 +463,7 @@ header nav ul li {
 	bottom: 0;
 	/*width: 100%;*/
 	/*height: 100%;*/
-	border: 1px solid #474747;
+	/*border: 1px solid #474747;*/
 }
 .box1 {
 	/*margin: 100px 0;*/
@@ -560,7 +560,7 @@ header nav ul li {
 	object-fit: cover;
 }
 .lowerBox img {
-	min-height: 278px;
+	/*min-height: 278px;*/
 }
 .upperBox,
 .lowerBox {
@@ -580,6 +580,7 @@ header nav ul li {
 }
 .upperBox h5 {
 	position: absolute;
+	margin: 7px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -593,6 +594,10 @@ header nav ul li {
 .productContainer {
 	border: 1px solid #dadada;
 }
-
+@media screen and (max-width: 1325px) {
+	.upperBox {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
 
 
