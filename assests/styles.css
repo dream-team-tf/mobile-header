@@ -187,7 +187,8 @@ header .cartContainer {
 header .cartContainer.open {
 	left: 0;
 }
-header .cart-wrapper {
+header .cartContainer .desktopCart {
+	display: none;
 }
 header .cartContainer article {
 	padding: 20px;
@@ -299,6 +300,9 @@ header .cartContainer {
 	padding: 0;
 	position: unset;
 	width: 200px;
+}
+header .cartContainer .desktopCart {
+	display: block;
 }
 header .cartContainer article {
 	background: #fff;

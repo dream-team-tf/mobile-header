@@ -7,27 +7,34 @@ $(window).scroll(function() {
     $('header').removeClass('fixed');
     $('header').removeClass('extend');
     $("#navHam").removeClass("slower");
-		$("header nav").removeClass("open");
-		$("#navHam").removeClass("disable");
+        $("header nav").removeClass("open");
   }
 });
 
+ 
+
 $("#navHam").click(function () {
-	$("header").addClass("extend");
-	$("header nav").addClass("open");
-	$("#navHam").addClass("disable");
+    $("header").toggleClass("extend");
+    $("header nav").toggleClass("open");
 });
 
+ 
+
 $('header').mouseover(function() {
-	if (($(window).width() > 1399)) {
-		$("header.fixed").addClass("extend");
-		$("header.fixed nav").addClass("open");
-		$("#navHam").addClass("disable");
-	}
+    if (($(window).width() > 1399)) {
+        $("header.fixed").addClass("extend");
+        $("header.fixed nav").addClass("open");
+    }
+});
+$('header').mouseout(function() {
+    if (($(window).width() > 1399)) {
+        $("header").removeClass("extend");
+        $("header nav").removeClass("open");
+    }
 });
 $(document).mouseup(function(e) 
 {
-	var containerS = $("header");
+	var containerS = $("header nav");
 
 	// if the target of the click isn't the container nor a descendant of the container
 	if (!containerS.is(e.target) && containerS.has(e.target).length === 0) 
