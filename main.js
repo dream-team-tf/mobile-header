@@ -67,3 +67,19 @@ $(document).mouseup(function(e)
 		$("#navCart").removeClass("disable");
 	}
 });
+
+
+// category filter
+$('.upperBox figure').on('click', function() {
+	var category = $(this).attr('class');
+	var products = $('.productContainer');
+
+	// for(i=0; i<products.length; i++) {
+	// 	var product = products[i];
+	// 	// console.log(products[i])
+	// 	// products[i].addClass('chosen').filter(':not(category)').removeClass('chosen')
+
+	// }
+	var filter = products.filter(products.classList.contains('treadmill'))
+	console.log(filter)
+})
