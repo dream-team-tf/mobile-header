@@ -385,7 +385,15 @@ header nav ul li {
 	display: inline-block;
 	margin: 0 5px;
 }
-
+header nav ul li a {
+	-webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+header nav ul li a:hover {
+	color: #f8df29;
+}
 header.fixed {
 	height: 81px;
 }
@@ -510,6 +518,16 @@ header nav ul li {
 }
 .box1 figure {
 	height: 300px;
+}
+@media screen and (max-width: 768px) {
+	.box4 {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media screen and (max-width: 624px) {
+	.box3 {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 @media screen and (max-width: 500px) {
 	.wrapper {
