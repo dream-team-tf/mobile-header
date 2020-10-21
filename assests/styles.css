@@ -301,9 +301,103 @@ header .cartContainer {
 	position: unset;
 	width: 200px;
 }
+
+/*desktop cart*/
 header .cartContainer .desktopCart {
 	display: block;
+	position: absolute;
+	right: 0;
+	top: 95px;
+	background: #1979c3;
+	padding: 15px;
 }
+header .itemContainer,
+header .itemInfo {
+	display: flex;
+}
+header .itemContainer {
+	/*padding: 15px;*/
+	margin-bottom: 15px;
+}
+header .itemContainer:first-of-type {
+	margin-top: 10px;
+}
+header .itemInfo,
+header .quantityChange {
+	margin-left: 15px;
+}
+header .itemInfo {
+	flex-direction: column;
+	justify-content: space-between;
+}
+header .itemContainer figure {
+	margin: 0;
+	max-width: 80px;
+	max-height: 80px;
+}
+header .desktopCart h4,
+header .desktopCart h5 {
+	margin: 0;
+	text-align: left;
+}
+header .itemContainer h5 {
+	color: #1979c3;
+	width: fit-content;
+	background: #fff;
+	display: inline-block;
+	padding: 5px 10px;
+}
+header .quantityChange i {
+	background: #fff;
+	color: #083776;
+}
+header .totalContainer {
+	margin-left: 95px;
+}
+header .totalContainer h4 {
+	color: #f8df29;
+}
+header .cartContainer .totalContainer hr {
+	border: none;
+  height: 1px;
+  display: block;
+  background: #fff;
+  margin: 15px 0;
+  margin-right: auto;
+  width: 125px;
+}
+header .buttonBox button {
+	padding: 6px;
+	cursor: pointer;
+}
+header .buttonBox button:first-of-type {
+	background: #1979c3;
+	color: #fff;
+	border: 1px solid #fff;
+}
+header .buttonBox button:last-of-type {
+	background: #fff;
+	color: #1979c3;
+	border: 1px solid #1979c3;
+}
+header .buttonBox button:hover {
+	color: #f8df29;
+	background: #1979c3;
+	border-color: #fff;
+}
+
+/*header .buttonBox button:first-of-type:hover {
+	color: #1979c3;
+	background: #fff;
+	border-color: #1979c3;
+}
+header .buttonBox button:last-of-type:hover {
+	color: #fff;
+	background: #1979c3;
+	border-color: #fff;
+}*/
+/*end of desktop cart*/
+
 header .cartContainer article {
 	background: #fff;
 	border: 1px solid #083776;
