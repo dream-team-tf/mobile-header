@@ -307,9 +307,12 @@ header .cartContainer .desktopCart {
 	display: block;
 	position: absolute;
 	right: 0;
-	top: 95px;
+	top: -500px;
 	background: #1979c3;
 	padding: 15px;
+}
+header .cartContainer.open .desktopCart {
+	top: 95px;
 }
 header .itemContainer,
 header .itemInfo {
@@ -350,6 +353,7 @@ header .itemContainer h5 {
 header .quantityChange i {
 	background: #fff;
 	color: #083776;
+	font-size: 12px;
 }
 header .totalContainer {
 	margin-left: 95px;
@@ -396,6 +400,7 @@ header .buttonBox button:last-of-type:hover {
 	background: #1979c3;
 	border-color: #fff;
 }*/
+
 /*end of desktop cart*/
 
 header .cartContainer article {
@@ -410,7 +415,7 @@ header .cartContainer article {
 		transition: all 0.3s ease;
 }
 header .cartContainer.open article {
-	top: 175px;
+	/*top: 175px;*/
 }
 header .cartContainer hr {
 	display: none;

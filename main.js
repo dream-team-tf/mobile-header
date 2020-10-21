@@ -75,6 +75,18 @@ $(document).mouseup(function(e)
 	}
 });
 
+// math cart function
+$('.desktopCart .quantityChange i').on('click', function() {
+	var clicked = $(this).attr('class')
+
+	if(clicked.has('fa-plus')) {
+		console.log('plus') 
+	} else {
+		console.log('minus')
+	}
+})
+
+
 
 // category filter
 $('.upperBox figure').on('click', function() {
