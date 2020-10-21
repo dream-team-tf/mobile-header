@@ -27,7 +27,7 @@ $('header').mouseover(function() {
 });
 $(document).mouseup(function(e) 
 {
-	var containerS = $("header nav");
+	var containerS = $("header");
 
 	// if the target of the click isn't the container nor a descendant of the container
 	if (!containerS.is(e.target) && containerS.has(e.target).length === 0) 
