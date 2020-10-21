@@ -34,6 +34,15 @@ select, option {
 	padding: 5px;
 }
 
+select {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  background: #efefef;
+  border: none;
+  border-radius: 3px;
+}
+
 .fas {
 	font-size: 20px;
 	padding: 5px;
@@ -86,23 +95,22 @@ header .logo {
 	max-width: 90px;
 }
 header nav {
+  align-items: center;
 	background: #083776;
-	/*display: inline-block;*/
 	float: left;
+	height: calc(100vh - 80px);
+  justify-content: space-between;
 	position: relative;
-		top: -200px;
+		top: 80px;
+		left: -100vw;
 	-webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
 }
 header nav.open {
-	height: calc(100vh - 80px);
-	top: 80px;
+	left: 0;
 }
 header #navHam {
 	display: inline-block;
@@ -111,9 +119,19 @@ header #navHam {
 	margin-top: 5px;
 	padding: 10px;
 }
-
+header nav ul {
+	width: 100%;
+		max-width: 400px;
+}
 header nav ul:last-of-type {
 	display: none;
+}
+header nav li {
+  width: calc(100% - 36px);
+}
+header nav li:after {
+	content: '+';
+	float: right;
 }
 header .searchContainer {
 	position: absolute;
@@ -133,6 +151,9 @@ header input[type="search"] {
 	height: 50px;
 	padding: 7px;
 	width: 100%;
+}
+header input[type="search"]:focus {
+  outline-width: 0;
 }
 header .searchContainer button {
 	background: #f8df29;
@@ -214,10 +235,32 @@ header .cartContainer .phoneContainer a {
 header .cartContainer .phoneContainer i {
 	display: none;
 }
+header .locationContainer {
+  display: inline-block;
+	margin-top: 10px;
+  position: relative;
+}
 header select {
 	background: #fff;
 	border: 1px #083776 solid;
-	margin-top: 10px;
+	display: inline;
+	position:relative;
+}
+header .locationContainer:after {
+  border-top: 8px solid black;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+	content:"";
+	height:0;
+  opacity: 0.5;
+	pointer-events: none;
+	position:absolute;
+    top: .8em;
+    right: .5em;
+	width:0;
+}
+header select::-ms-expand {
+    display: none;
 }
 header label[for="location"] i {
 	color: #083776;
@@ -228,9 +271,9 @@ header label[for="location"] i {
 
 @media screen and (min-width: 1024px) {
 body {
-	margin: 135px 0 0;
+	margin: 118px 0 0;
 }
-header, header #navHam, header .logo, header .searchContainer, header label[for="location"] i, header select, header .iconContainer {
+header, header #navHam, header .logo, header .searchContainer, header .locationContainer, header .iconContainer {
 	-webkit-transition: all 0.1s ease;
 		-moz-transition: all 0.1s ease;
 		-o-transition: all 0.1s ease;
@@ -310,6 +353,10 @@ header .cartContainer .desktopCart {
 	top: -500px;
 	background: #1979c3;
 	padding: 15px;
+	-webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
 }
 header .cartContainer.open .desktopCart {
 	top: 95px;
@@ -440,16 +487,12 @@ header .navPhoneLinks i {
 	margin-right: 5px;
 	padding: 3px;
 }
-header select {
-	margin: 0;
-	position: relative;
-		top: -50px;
+header .locationContainer {
+  top: -50px;
 }
+header select {}
 header label[for="location"] i {
-	/*color: #fff;*/
 	color: #f8df29;
-	position: relative;
-		top: -50px;
 }
 header label[for="location"] i:hover {
 	color: #f8df29;
@@ -469,24 +512,32 @@ header #navUser {
 }
 header nav {
 	background: none;
+	display: inline-flex;
 	height: auto!important;
 	top: 50px!important;
-	left: 165px;
+	left: 165px!important;
 	width: calc(100vw - 165px);
 		max-width: 1335px;
 	z-index: 3;
 }
 header nav ul {
 	display: inline-block;
+	width: auto;
+		max-width: 100%;
 }
 header nav ul:last-of-type {
 	display: inline-block;
 	position: absolute;
 		top: 20px;
 }
-header nav ul li {
+header nav li {
 	display: inline-block;
+	font-size: 16px;
 	margin: 0 5px;
+	width: auto;
+}
+header nav li:after {
+	content: none;
 }
 header nav ul li a {
 	-webkit-transition: all 0.3s ease;
@@ -509,7 +560,7 @@ header.fixed .searchContainer {
 	margin-left: 20px;
 	top: -25px;
 }
-header.fixed label[for="location"] i, header.fixed select {
+header.fixed .locationContainer {
 	top: -25px;
 }
 header.fixed .iconContainer {
@@ -534,8 +585,23 @@ header.fixed nav.open {
 header.fixed .cartContainer .phoneContainer.open {
 	top: 63px;
 }
+header.fixed .cartContainer.open .desktopCart {
+  top: 81px;
+}
 header.extend {
 	height: 100px;
+}
+header.extend .cartContainer.open .desktopCart {
+  top: 100px;
+}
+header.closed {
+	height: 81px!important;
+}
+header.closed nav {
+	transition: none;
+}
+header.closed nav.open {
+	top: -50px!important;
 }
 }
 
