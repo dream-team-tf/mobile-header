@@ -391,7 +391,8 @@ header nav ul li a {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-header nav ul li a:hover {
+header nav ul li a:hover,
+header nav ul li:hover {
 	color: #f8df29;
 }
 header.fixed {
