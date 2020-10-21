@@ -144,6 +144,7 @@ header .searchContainer {
 	width: 100%;
 }
 header input[type="search"] {
+	-webkit-appearance: none;
 	background: #f4f4f4;
 	border: none;
 	color: #000;
