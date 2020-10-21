@@ -453,6 +453,7 @@ header nav ul li {
 /*grid system*/
 .wrapper {
 	border: 3px dashed red;
+	box-sizing: border-box;
 }
 .box {
 	background: #d3d3d3;
@@ -595,9 +596,51 @@ header nav ul li {
 	border: 1px solid #dadada;
 }
 @media screen and (max-width: 1325px) {
+	.wrapper {
+		width: 90%;
+	}
 	.upperBox {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
-
-
+@media screen and (max-width: 995px) {
+	.wrapper {
+		width: 100%;
+		padding: 10px;
+	}
+	#contentContainer,
+	.upperBox,
+	.middleBox,
+	.lowerBox {
+		grid-gap: 10px;
+	}
+	.middleBox {
+		padding: 10px 0;
+	}
+	.lowerBox {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (max-width: 850px) {
+	#contentContainer {
+		grid-template-columns: 1fr;
+	}
+	.leftBox {
+		position: absolute;
+		left: -1000px;
+	}
+}
+@media screen and (max-width: 550px) {
+	.lowerBox {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media screen and (max-width: 425px) {
+	.upperBox {
+		grid-template-columns: 1fr 1fr;
+	}
+	.productContainer h4 {
+		margin: 0 0 10px;
+		font-size: 14px;
+	}
+}
