@@ -599,6 +599,8 @@ header.closed {
 	height: 81px!important;
 }
 header.closed nav {
+	opacity: 0;
+	pointer-events: none;
 	transition: none;
 }
 header.closed nav.open {
