@@ -135,9 +135,8 @@
 	<script>
 		var animate = bodymovin.loadAnimation({
 				container: document.getElementById('anim'),
-				animType: 'svg',
-				render: true,
-				loop: false,
+				renderer: 'svg',
+				loop: true,
 				autoplay: false,
 				path: 'assests/17423-laptop-3d-animation-in-3d-json-file.json'
 		});
@@ -164,6 +163,7 @@
 		    duration: '800%'
 		  })
 		  .setTween(tl)
+		  .addIndicators({name: "text"})
 		  .addTo(controller);
 	</script>
 
