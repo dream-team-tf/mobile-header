@@ -116,6 +116,17 @@
 	</header>
 <body>
 
+<style>
+	#anim {
+		max-width: 800px;
+		margin: 0 auto;
+		position: fixed;
+	}
+	body {
+		height: 500vh;
+	}
+</style>	
+
 	<div id="anim"></div>
 
 	<div id="trigger" class="scene"></div>
@@ -125,7 +136,7 @@
 		var animate = bodymovin.loadAnimation({
 				container: document.getElementById('anim'),
 				animType: 'svg',
-				prerender: true,
+				render: true,
 				loop: false,
 				autoplay: false,
 				path: 'assests/17423-laptop-3d-animation-in-3d-json-file.json'
