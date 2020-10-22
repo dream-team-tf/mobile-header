@@ -643,9 +643,6 @@ header nav ul li {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	/*width: 100%;*/
-	/*height: 100%;*/
-	/*border: 1px solid #474747;*/
 }
 .box1 {
 	/*margin: 100px 0;*/
@@ -692,6 +689,15 @@ header nav ul li {
 .box1 figure {
 	height: 300px;
 }
+@media screen and (max-width: 1024px) {
+	body {
+		margin-top: 80px;
+	}
+	.wrapper {
+		width: 100%;
+		padding: 20px;
+	}
+}
 @media screen and (max-width: 768px) {
 	.box4 {
 		grid-template-columns: 1fr 1fr;
@@ -700,6 +706,12 @@ header nav ul li {
 @media screen and (max-width: 624px) {
 	.box3 {
 		grid-template-columns: 1fr 1fr;
+	}
+	.box3 figure:last-of-type {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		width: 50%;
+		margin: 0 auto;
 	}
 }
 @media screen and (max-width: 500px) {
@@ -787,18 +799,18 @@ header nav ul li {
 	border: 1px solid #dadada;
 }
 @media screen and (max-width: 1325px) {
-	.wrapper {
+/*	.wrapper {
 		width: 90%;
-	}
+	}*/
 	.upperBox {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 @media screen and (max-width: 995px) {
-	.wrapper {
+/*	.wrapper {
 		width: 100%;
 		padding: 10px;
-	}
+	}*/
 	#contentContainer,
 	.upperBox,
 	.middleBox,
