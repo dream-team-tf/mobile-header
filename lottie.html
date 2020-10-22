@@ -118,19 +118,45 @@
 
 	<div id="anim"></div>
 
+	<div id="trigger" class="scene"></div>
+
 <script src="lottie.js"></script>
 	<script>
 		var animate = bodymovin.loadAnimation({
 				container: document.getElementById('anim'),
 				renderer: 'svg',
 				loop: true,
-				autoplay: true,
+				autoplay: false,
 				path: 'assests/17423-laptop-3d-animation-in-3d-json-file.json'
 		});
+
+		animate.addEventListener('DOMLoaded', onAnimateDOMLoaded);
+
+		var tl = new TimelineMax();
+
+		function onAnimateDOMLoaded(e) {
+		  tl.to({frame: 0}, 3, {
+		    frame: animate.totalFrames - 1,
+		    onUpdate: function() {
+		      animate.goToAndStop(Math.round(this.target.frame), true)
+		    },
+		    ease: Linear.easeNone
+		  })
+		}
+
+		let controller = new ScrollMagic.Controller({
+		  globalSceneOptions: {triggerHook: 'onLeave'}
+		});
+		let animationScene = new ScrollMagic.Scene({
+		    triggerElement: "#trigger",
+		    duration: '800%'
+		  })
+		  .setTween(tl)
+		  .addTo(controller);
 	</script>
 
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
