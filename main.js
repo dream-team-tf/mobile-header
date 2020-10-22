@@ -61,16 +61,24 @@ $(document).mouseup(function(e)
 	}
 });
 
-// math cart function
-$('.desktopCart .quantityChange i').on('click', function() {
-	var clicked = $(this).classList;
-	console.log(clicked)
-	// if(clicked == 'fa-plus') {
-	// 	console.log('plus') 
-	// } else {
-	// 	console.log('minus')
-	// }
-})
+// shopping cart function
+$('.desktopCart .quantityChange i').click(function() {
+
+	if($(this).hasClass('fa-plus')) {
+		var oldValue = $(this).closest('.itemContainer').find('h5.quantity').html(); 
+		var newValue = parseFloat(oldValue) + 1;
+		var num = $(this).closest('.itemContainer').find('h5.quantity').text(newValue);
+
+	} else {
+			var oldValue = $(this).closest('.itemContainer').find('h5.quantity').html(); 
+		if(oldValue > 0) {
+			var newValue = parseFloat(oldValue) - 1;
+			var num = $(this).closest('.itemContainer').find('h5.quantity').text(newValue);
+		} else {
+			newValue = 0;
+		}
+	}
+});
 
 
 
