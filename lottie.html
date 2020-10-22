@@ -124,8 +124,10 @@
 	<script>
 		var animate = bodymovin.loadAnimation({
 				container: document.getElementById('anim'),
-				renderer: 'svg',
-				loop: true,
+				wrapper: animateWindow,
+				animType: 'svg',
+				prerender: true,
+				loop: false,
 				autoplay: false,
 				path: 'assests/17423-laptop-3d-animation-in-3d-json-file.json'
 		});
