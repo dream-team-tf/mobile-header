@@ -61,7 +61,11 @@ $(document).mouseup(function(e)
 	}
 });
 
+
+
+
 // shopping cart function
+// product quantity function 
 $('.desktopCart .quantityChange i').click(function() {
 
 	if($(this).hasClass('fa-plus')) {
@@ -79,6 +83,10 @@ $('.desktopCart .quantityChange i').click(function() {
 		}
 	}
 });
+// price total function
+var priceOfItem = $('.totalContainer h4.total').closest('.desktopCart').find('.itemInfo h4.price');
+var price = priceOfItem.replace('$', '')
+var total = (parseFloat(priceOfItem[0].innerHTML) + parseFloat(priceOfItem[1].innerHTML) )*1.13
 
 
 
