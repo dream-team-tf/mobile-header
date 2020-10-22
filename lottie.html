@@ -120,8 +120,10 @@
 	#anim {
 		max-width: 800px;
 		position: fixed;
+		top: 50%;
 		left: 50%;
 		margin: auto 0;
+		-webkit-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
 	}
 	.scene {
@@ -138,16 +140,20 @@
 
 <script src="lottie.js"></script>
 	<script>
-		var animate = bodymovin.loadAnimation({
-				container: document.getElementById('anim'),
-				renderer: 'svg',
-				loop: true,
+
+		var animateWindow = document.getElementById('anim'),
+			animData = {
+				wrapper: animateWindow,
+				animType: 'svg',
+				loop: false,
+				prerender: true,
 				autoplay: false,
-				path: 'assests/17423-laptop-3d-animation-in-3d-json-file.json'
-		});
+				path: 'assests/17423-laptop-3d-animation-in-3d-json-file.json',
+			};
 
-		animate.addEventListener('DOMLoaded', onAnimateDOMLoaded);
-
+		var anim = bodymovin.loadAnimation(animData);
+		anim.addEventListener('DOMLoaded', onAnimateDOMLoaded);
+			
 		var tl = new TimelineMax();
 
 		function onAnimateDOMLoaded(e) {
