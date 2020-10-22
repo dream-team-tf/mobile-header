@@ -351,8 +351,9 @@ header .cartContainer .desktopCart {
 	display: block;
 	position: absolute;
 	right: 0;
-	top: -500px;
-	background: #1979c3;
+	top: 0;
+	opacity: 0;
+	pointer-events: none;
 	padding: 15px;
 	-webkit-transition: all 0.1s ease;
     -moz-transition: all 0.1s ease;
@@ -360,6 +361,9 @@ header .cartContainer .desktopCart {
     transition: all 0.1s ease;
 }
 header .cartContainer.open .desktopCart {
+  background: #1979c3;
+	opacity: 1;
+  pointer-events: auto;
 	top: 95px;
 }
 header .itemContainer,
