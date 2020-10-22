@@ -15,11 +15,11 @@ $(window).scroll(function() {
 $("#navHam").click(function () {
 	$("header").toggleClass("extend");
 	$("header nav").toggleClass("open");
-	//$("header").toggleClass("closed");
+	$("header").toggleClass("closed");
 });
 
 $('header').mouseover(function() {
-	if (($(window).width() > 1399)) {
+	if (($(window).width() > 1399) && (!$('header').hasClass( "closed" ))) {
 		$("header.fixed").addClass("extend");
 		$("header.fixed nav").addClass("open");
 	}
