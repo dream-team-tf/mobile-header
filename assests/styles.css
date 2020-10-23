@@ -566,7 +566,7 @@ header nav ul:last-of-type {
 }
 header nav li {
 	display: inline-block;
-	font-size: 16px;
+	font-size: 14px;
 	margin: 0 5px;
 	width: auto;
 }
