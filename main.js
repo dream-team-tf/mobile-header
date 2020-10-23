@@ -69,8 +69,10 @@ $(window).scroll(function() {
 	if($(document).scrollTop() >= 150 && $(window).width() >= 1050) {
 
 		$('header, header:before').addClass('transparent')
+		$('headerWrapper, header').css('background', 'none')
 	} else {
 		$('header, header:before').removeClass('transparent')
+		$('headerWrapper, header').css('background', '#083776')
 	}
 })
 
