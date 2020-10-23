@@ -337,12 +337,13 @@ header .searchContainer {
 		top: -45px;
 		right: unset;
 		bottom: unset;
-	width: 400px;
+	/*width: 400px;*/
+	width: 600px;
 }
 header input[type="search"] {
 	font-size: 13px;
 	height: 36px;
-	border-radius: 2px;
+	border-radius: 4px;
 	color: #005589;
 }
 header input[type="search"]::placeholder {
@@ -351,7 +352,7 @@ header input[type="search"]::placeholder {
 header .searchContainer button {
 	height: 36px;
 	width: 36px;
-	border-radius: 2px;
+	border-radius: 4px;
 }
 header .searchContainer i {
 	font-size: 20px;
@@ -512,9 +513,10 @@ header .navPhoneLinks i {
 	font-size: 12px;
 	margin-right: 5px;
 	padding: 4px;
+	border-radius: 4px;
 }
 header .locationContainer {
-  top: -42.5px;
+  top: -39.5px;
 }
 header select {}
 header label[for="location"] i {
@@ -537,6 +539,10 @@ header #navUser {
 	display: inline-block;
 	font-size: 21px;
 	margin: 0;
+}
+header #navCart {
+	margin: 0;
+	font-size: 19px;
 }
 header nav {
 	background: none;
@@ -655,10 +661,12 @@ header nav {
 	top: 60px!important;
 	left: 217.5px!important;
 	width: calc(100vw - 217.5px);
-		max-width: 1282.5px;
+		/*max-width: 1282.5px;*/
+		max-width: 1532.5px;
 }
 header nav ul:first-of-type li {
   margin-right: 20px;
+  letter-spacing: 0.75px;
 }
 header nav ul:first-of-type li:first-of-type {
   margin-left: 0;
