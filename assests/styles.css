@@ -282,7 +282,7 @@ header label[for="location"] i {
 	pointer-events: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1050px) {
 body {
 	margin: 118px 0 0;
 }
@@ -645,7 +645,7 @@ header .locationContainer i.fa-chevron-down {
 }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1475px) {
 header .iconContainer .fas {
 	padding: 6px;
 	font-size: 17px;
