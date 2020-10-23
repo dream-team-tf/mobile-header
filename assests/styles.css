@@ -243,7 +243,7 @@ header .locationContainer {
 }
 header select {
 	background: none;
-	color: #fff;
+	/*color: #fff;*/
 	display: inline;
 	padding-right: 25px;
 	position:relative;
@@ -613,6 +613,9 @@ header.closed nav {
 }
 header.closed nav.open {
 	top: -50px!important;
+	}
+header select {
+	color: #fff;
 }
 }
 
