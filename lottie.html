@@ -163,7 +163,7 @@
 
 		function onAnimateDOMLoaded(e) {
 		  tl.to({frame: 0}, 3, {
-		    frame: animate.totalFrames - 1,
+		    frame: anim.totalFrames - 1,
 		    onUpdate: function() {
 		      animate.goToAndStop(Math.round(this.target.frame), true)
 		    },
