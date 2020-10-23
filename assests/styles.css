@@ -254,7 +254,7 @@ header select {
 	text-transform: uppercase;
 }
 header .locationContainer:after {
-  border-top: 8px solid #fff;
+/*  border-top: 8px solid #fff;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
 	content:"";
@@ -263,7 +263,14 @@ header .locationContainer:after {
 	position:absolute;
     top: .6em;
     right: .5em;
-	width:0;
+	width:0;*/
+}
+header .locationContainer i.fa-chevron-down {
+	position: absolute;
+	right: 0;
+	font-size: 13px;
+	padding-top: 9px;
+	color: #000;
 }
 header select::-ms-expand {
     display: none;
@@ -626,7 +633,8 @@ header.closed nav {
 header.closed nav.open {
 	top: -50px!important;
 	}
-header select {
+header select,
+header .locationContainer i.fa-chevron-down {
 	color: #fff;
 }
 }
