@@ -378,7 +378,7 @@ header .cartContainer.open .desktopCart {
   background: #1979c3;
 	opacity: 1;
   pointer-events: auto;
-	top: 95px;
+	top: 91px;
 }
 header .itemContainer,
 header .itemInfo {
@@ -607,13 +607,13 @@ header.fixed .cartContainer .phoneContainer.open {
 	top: 63px;
 }
 header.fixed .cartContainer.open .desktopCart {
-  top: 81px;
+  top: 76px;
 }
 header.extend {
 	height: 107.5px;
 }
 header.extend .cartContainer.open .desktopCart {
-  top: 100px;
+  top: 95px;
 }
 header.closed {
 	height: 81px!important;
