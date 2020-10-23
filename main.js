@@ -68,9 +68,9 @@ $(document).mouseup(function(e)
 $(window).scroll(function() {
 	if($(document).scrollTop() >= 150 && $(window).width() >= 1050) {
 
-		$('header, header:before, header .headerWrapper, header nav').css('background', 'rgba(0,0,0,0.75)')
+		$('header, header:before, .headerWrapper, header nav').addClass('transparent')
 	} else {
-		$('header, header:before, header .headerWrapper, header nav').css('background', '#083776')
+		$('header, header:before, header .headerWrapper, header nav').removeClass('transparent')
 	}
 })
 

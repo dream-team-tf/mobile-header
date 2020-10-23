@@ -309,6 +309,11 @@ header:before {
 	width: calc(100vw + 750px);
 	z-index: -1;
 }
+.headerWrapper.transparent,
+header.transparent:before,
+header.transparent {
+	background: rgba(8, 55, 118, .75);
+}
 header .headerWrapper {
 	padding: 0;
 	top: 5px;
