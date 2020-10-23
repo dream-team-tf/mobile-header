@@ -621,6 +621,10 @@ header .iconContainer .fas {
 	padding: 6px;
 	font-size: 17px;
 }
+header #navHam {
+  margin-top: 10px;
+  left: 15px;
+}
 header .logo {
   padding: 0 25px;
 }
