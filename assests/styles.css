@@ -918,3 +918,43 @@ header.fixed nav.open {
 		font-size: 14px;
 	}
 }
+
+
+/*Banner Code*/
+.fullwidth {
+	width: 100%;
+}
+.fullwidth figure {
+	margin: 0;
+}
+.fullwidth article {
+	display: none;
+  position: relative;
+}
+.fullwidth article .text {
+  padding: 10px;
+  position: absolute;
+    bottom: 0;
+  width: calc(100% - 20px);
+}
+.fullwidth article h3 {
+  margin: 0 0 10px;
+}
+.fullwidth article p {
+  margin: 0;
+}
+.fullwidth .bottom-info button, .fullwidth .bottom-info p, .fullwidth .bottom-info h3 {
+	display: inline-block;
+	margin: 0;
+}
+.fullwidth .bottom-info button {
+  margin-left: 10px;
+}
+.fullwidth .bottom-info h3 {
+	color: #f00;
+	float: right;
+  margin-right: 10px;
+}
+.fullwidth .bottom-info a {
+	color: #333;
+}
