@@ -64,10 +64,15 @@ $(document).mouseup(function(e)
 
 
 // transparent header
-// track when the top of the header passes #bodyContent
-// $(window).scroll(function() {
-// 	if($('header').scrollTop() > )
-// })
+// track when the top of the header passes #bodyContent or number of px from top
+$(window).scroll(function() {
+	if($(document).scrollTop() >= 150 && $(window).width() >= 1050) {
+
+		$('header, header:before, header .headerWrapper, header nav').css('background', 'rgba(0,0,0,0.75)')
+	} else {
+		$('header, header:before, header .headerWrapper, header nav').css('background', '#083776')
+	}
+})
 
 
 
