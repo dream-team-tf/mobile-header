@@ -150,7 +150,7 @@ header input[type="search"] {
 	color: #000;
 	font-size: 18px;
 	height: 50px;
-	padding: 7px;
+	padding: 7px 12px;
 	width: 100%;
 }
 header input[type="search"]:focus {
@@ -242,21 +242,23 @@ header .locationContainer {
   position: relative;
 }
 header select {
-	background: #fff;
-	border: 1px #083776 solid;
+	background: none;
+	color: #fff;
 	display: inline;
+	padding-right: 25px;
 	position:relative;
+		top: -3px;
+	text-transform: uppercase;
 }
 header .locationContainer:after {
-  border-top: 8px solid black;
+  border-top: 8px solid #fff;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
 	content:"";
 	height:0;
-  opacity: 0.5;
 	pointer-events: none;
 	position:absolute;
-    top: .8em;
+    top: .6em;
     right: .5em;
 	width:0;
 }
@@ -281,7 +283,7 @@ header, header #navHam, header .logo, header .searchContainer, header .locationC
 		transition: all 0.1s ease;
 }
 header {
-	height: 95px;
+	height: 96px;
 	margin: 0 auto;
 	left: 0;
 	right: 0;
@@ -298,7 +300,8 @@ header:before {
 	z-index: -1;
 }
 header .headerWrapper {
-	padding-bottom: 0;
+	padding: 0;
+	top: 5px;
 }
 header #navHam {
 	opacity: 0;
@@ -315,23 +318,24 @@ header #navHam.slower {
 header .logo {
 	max-width: 120px;
 	position: relative;
+    top: 5px;
 		left: -20px;
 }
 header .searchContainer {
 	display: inline-block;
 	position: relative;
-		top: -50px;
+		top: -45px;
 		right: unset;
 		bottom: unset;
 	width: 400px;
 }
 header input[type="search"] {
 	font-size: 13px;
-	height: 30px;
+	height: 36px;
 }
 header .searchContainer button {
-	height: 30px;
-	width: 30px;
+	height: 36px;
+	width: 36px;
 }
 header .searchContainer i {
 	font-size: 20px;
@@ -493,7 +497,7 @@ header .navPhoneLinks i {
 	padding: 3px;
 }
 header .locationContainer {
-  top: -50px;
+  top: -42.5px;
 }
 header select {}
 header label[for="location"] i {
@@ -566,7 +570,7 @@ header.fixed .searchContainer {
 	top: -25px;
 }
 header.fixed .locationContainer {
-	top: -25px;
+	top: -22.5px;
 }
 header.fixed .iconContainer {
   margin-top: 9px;
@@ -585,7 +589,7 @@ header.fixed .cartContainer .phoneContainer {
 }
 header.fixed nav.open {
 	opacity: 1;
-	top: 70px!important;
+	top: 60px!important;
 }
 header.fixed .cartContainer .phoneContainer.open {
 	top: 63px;
@@ -594,7 +598,7 @@ header.fixed .cartContainer.open .desktopCart {
   top: 81px;
 }
 header.extend {
-	height: 100px;
+	height: 107.5px;
 }
 header.extend .cartContainer.open .desktopCart {
   top: 100px;
@@ -617,11 +621,27 @@ header .iconContainer .fas {
 	padding: 6px;
 	font-size: 17px;
 }
+header #navHam {
+  margin-top: 10px;
+  left: 15px;
+}
+header .logo {
+  padding: 0 25px;
+}
 header nav {
 	top: 60px!important;
-	left: 160px;
-	width: calc(100vw - 160px);
-		max-width: 1340px;
+	left: 217.5px!important;
+	width: calc(100vw - 217.5px);
+		max-width: 1282.5px;
+}
+header nav ul:first-of-type li {
+  margin-right: 20px;
+}
+header nav ul:first-of-type li:first-of-type {
+  margin-left: 0;
+}
+header nav ul:first-of-type li:last-of-type {
+  margin-right: 0;
 }
 header nav ul:last-of-type {
 	float: right;
@@ -630,6 +650,12 @@ header nav ul:last-of-type {
 }
 header nav ul li {
 	margin: 0 10px;
+}
+header.extend {
+	height: 100px;
+}
+header.fixed nav.open {
+	top: 67.5px!important;
 }
 }
 
