@@ -63,6 +63,14 @@ $(document).mouseup(function(e)
 
 
 
+// transparent header
+// track when the top of the header passes #bodyContent
+// $(window).scroll(function() {
+// 	if($('header').scrollTop() > )
+// })
+
+
+
 
 // shopping cart function
 // product quantity function 
