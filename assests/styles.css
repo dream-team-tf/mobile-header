@@ -584,7 +584,7 @@ header nav ul li:hover {
 	color: #f8df29;
 }
 header.fixed {
-	height: 81px;
+	height: 82px;
 }
 header.fixed .logo {
 	left: 5px;
@@ -620,13 +620,14 @@ header.fixed .cartContainer .phoneContainer.open {
 	top: 63px;
 }
 header.fixed .cartContainer.open .desktopCart {
-  top: 76px;
+  /*top: 76px;*/
+  top: 77px;
 }
 header.extend {
 	height: 107.5px;
 }
 header.extend .cartContainer.open .desktopCart {
-  top: 95px;
+  top: 91px;
 }
 header.closed {
 	height: 81px!important;
@@ -683,7 +684,8 @@ header nav ul li {
 	margin: 0 10px;
 }
 header.extend {
-	height: 100px;
+	/*height: 100px;*/
+	height: 96px;
 }
 header.fixed .logo {
   left: 15px;
