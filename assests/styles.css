@@ -18,8 +18,9 @@ img {
 }
 
 .wrapper {
-	width: 80%;
-	max-width: 1500px;
+	/*width: 80%;*/
+	width: 100%;
+	max-width: 1750px;
 	margin: 0 auto;
 }
 
@@ -157,7 +158,8 @@ header input[type="search"]:focus {
   outline-width: 0;
 }
 header .searchContainer button {
-	background: #f8df29;
+	/*background: #f8df29;*/
+	background: #f4f4f4;
 	border: none;
 	color: #083776;
 	height: 50px;
@@ -179,7 +181,7 @@ header .iconContainer {
 	margin-top: 9px;
 }
 header .iconContainer .fas {
-	background: #1979c3;
+	/*background: #1979c3;*/
 	border-radius: 50%;
 	padding: 6px;
 	margin-right: 10px;
@@ -287,7 +289,7 @@ header {
 	margin: 0 auto;
 	left: 0;
 	right: 0;
-	max-width: 1500px;
+	max-width: 1750px;
 }
 header:before {
 	background: #083776;
@@ -332,13 +334,20 @@ header .searchContainer {
 header input[type="search"] {
 	font-size: 13px;
 	height: 36px;
+	border-radius: 2px;
+	color: #005589;
+}
+header input[type="search"]::placeholder {
+	color: #005589;
 }
 header .searchContainer button {
 	height: 36px;
 	width: 36px;
+	border-radius: 2px;
 }
 header .searchContainer i {
 	font-size: 20px;
+	color: #005589;
 }
 header .cartContainer {
 	background: none;
@@ -494,7 +503,7 @@ header .navPhoneLinks i {
 	display: block;
 	font-size: 12px;
 	margin-right: 5px;
-	padding: 3px;
+	padding: 4px;
 }
 header .locationContainer {
   top: -42.5px;
@@ -518,6 +527,8 @@ header #navSearch {
 }
 header #navUser {
 	display: inline-block;
+	font-size: 21px;
+	margin: 0;
 }
 header nav {
 	background: none;
