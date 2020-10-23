@@ -654,6 +654,9 @@ header nav ul li {
 header.extend {
 	height: 100px;
 }
+header.fixed .logo {
+  left: 15px;
+}
 header.fixed nav.open {
 	top: 67.5px!important;
 }
