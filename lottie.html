@@ -165,7 +165,7 @@
 		  tl.to({frame: 0}, 3, {
 		    frame: anim.totalFrames - 1,
 		    onUpdate: function() {
-		      animate.goToAndStop(Math.round(this.target.frame), true)
+		      anim.goToAndStop(Math.round(this.target.frame), true)
 		    },
 		    ease: Linear.easeNone
 		  })
