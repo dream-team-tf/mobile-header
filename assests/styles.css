@@ -243,6 +243,7 @@ header .locationContainer {
   display: inline-block;
 	margin-top: 10px;
   position: relative;
+  vertical-align: -2.5px;
 }
 header select {
 	background: none;
@@ -575,7 +576,7 @@ header label[for="location"] i:hover {
 	color: #f8df29;
 }
 header .iconContainer {
-	margin-top: 0;
+	/*margin-top: 0;*/
 }
 header .iconContainer .fas {
 	padding: 3px;
@@ -588,6 +589,7 @@ header #navUser {
 	display: inline-block;
 	font-size: 21px;
 	margin: 0;
+	vertical-align: -1px;
 }
 header #navCart {
 	margin: 0;
