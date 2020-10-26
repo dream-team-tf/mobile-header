@@ -103,9 +103,12 @@ $('.desktopCart .quantityChange i').click(function() {
 	}
 });
 
-
+// remove from cart function
 $('.desktopCart .quantityChange .remove').click(function() {
 	$(this).closest('.itemContainer').addClass('shrink').slideUp();
+	setTimeout(function() {
+		$('.itemContainer.shrink').remove()
+	},300)
 });
 
 // price total function
