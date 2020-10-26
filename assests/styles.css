@@ -967,40 +967,85 @@ header.fixed nav.open {
 
 
 /*Banner Code*/
-.fullwidth {
-	width: 100%;
+.row {
+  display: flex;
 }
-.fullwidth figure {
-	margin: 0;
+.halfwidth {
+  background: #fbfbfb;
+  width: 50%;
 }
-.fullwidth article {
-	display: none;
+.banner figure {
+  height: 500px;
+  margin: 0;
+  overflow: hidden;
   position: relative;
+  width: 100%;
 }
-.fullwidth article .text {
-  padding: 10px;
+.banner article {
+  max-height: 500px;
+  overflow: hidden;
   position: absolute;
-    bottom: 0;
-  width: calc(100% - 20px);
+  width: 100%;
 }
-.fullwidth article h3 {
-  margin: 0 0 10px;
+.banner article.mySlides {
+  opacity: 0;
+  left: 100vw;
+  -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
-.fullwidth article p {
+.banner article .text {
+  padding: 0 20px;
+  position: absolute;
+    bottom: 65px;
+  width: calc(100% - 40px);
+  z-index: 5;
+}
+.banner article h3 {
+  font-size: 32px;
+  line-height: 1;
+  margin: 0;
+  max-width: 300px;
+}
+.banner article p {
+  color: #fff;
+  margin: 5px 0 0;
+}
+.banner .bottom-info button, .banner .bottom-info p, .banner .bottom-info h3 {
+  display: inline-block;
   margin: 0;
 }
-.fullwidth .bottom-info button, .fullwidth .bottom-info p, .fullwidth .bottom-info h3 {
-	display: inline-block;
-	margin: 0;
+.banner .bottom-info {
+  align-items: center;
+  background: linear-gradient(to top, black, transparent);
+  display: inline-flex;
+  padding: 100px 20px 0;
+  position: absolute;
+    bottom: 0;
+  width: calc(100% - 40px);
+  z-index: 1;
 }
-.fullwidth .bottom-info button {
-  margin-left: 10px;
+.banner .bottom-info button {
+  background: #626365;
+  border: none;
+  border-radius: 5px;
+  line-height: 1;
+  margin-right: 20px;
+  padding: 10px 20px;
 }
-.fullwidth .bottom-info h3 {
-	color: #f00;
-	float: right;
-  margin-right: 10px;
+.banner .bottom-info h3 {
+  color: #f00;
+  float: right;
+  font-size: 48px;
+  margin-left: auto;
 }
-.fullwidth .bottom-info a {
-	color: #333;
+.banner .bottom-info a {
+  color: #fff;
+  cursor: pointer;
+  margin: 5px;
+}
+.banner article.active {
+  left: 0;
+  opacity: 1;
 }
