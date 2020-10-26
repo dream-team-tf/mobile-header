@@ -400,7 +400,8 @@ header .cartContainer.open .desktopCart {
 	top: 91px;
 }
 header .itemContainer,
-header .itemInfo {
+header .itemInfo,
+header .quantityChange .remove {
 	display: flex;
 }
 header .itemContainer {
@@ -438,10 +439,26 @@ header .itemContainer h5 {
 	display: inline-block;
 	/*padding: 5px 10px;*/
 }
+header .quantityChange {
+	position: relative;
+}
+header .quantityChange .remove {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 header .quantityChange i {
 	background: #fff;
 	color: #083776;
-	font-size: 12px;
+	font-size: 13px;
+}
+header .quantityChange .remove p {
+	font-size: 13.5px;
+
+}
+header .quantityChange .remove i {
+	background: none;
+	color: #fff;
 }
 header .totalContainer {
 	margin-left: 95px;
