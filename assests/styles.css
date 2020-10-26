@@ -285,7 +285,7 @@ header label[for="location"] i {
 
 @media screen and (min-width: 1050px) {
 body {
-	margin: 118px 0 0;
+	margin: 96px 0 0;
 }
 header, header #navHam, header .logo, header .searchContainer, header .locationContainer, header .iconContainer {
 	-webkit-transition: all 0.1s ease;
@@ -989,9 +989,9 @@ header.fixed nav.open {
 
 /*Banner Code*/
 .row {
-  background: #333;
+  background: #000;
   display: flex;
-  padding: 1px;
+  padding: 0 1px 1px;
 }
 .halfwidth {
   background: #fff;
@@ -1018,7 +1018,7 @@ header.fixed nav.open {
 }
 .banner article.mySlides {
 	opacity: 0;
-	left: 100vw;
+	left: 0;
   -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -1071,6 +1071,5 @@ header.fixed nav.open {
 	margin: 5px;
 }
 .banner article.active {
-	left: 0;
 	opacity: 1;
 }
