@@ -86,6 +86,7 @@ if(document.URL.includes('lottie')) {
 // product quantity function 
 $('.desktopCart .quantityChange i').click(function() {
 
+	// product quantity function
 	if($(this).hasClass('fa-plus')) {
 		var oldValue = $(this).closest('.itemContainer').find('h5.quantity').html(); 
 		var newValue = parseFloat(oldValue) + 1;
@@ -101,6 +102,12 @@ $('.desktopCart .quantityChange i').click(function() {
 		}
 	}
 });
+
+
+$('.desktopCart .quantityChange .remove').click(function() {
+	$(this).closest('.itemContainer').addClass('shrink').slideUp();
+});
+
 // price total function
 // var priceOfItem = $('.totalContainer h4.total').closest('.desktopCart').find('.itemInfo h4.price');
 // var price = priceOfItem.replace('$', '')

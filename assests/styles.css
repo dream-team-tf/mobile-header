@@ -407,6 +407,10 @@ header .quantityChange .remove {
 header .itemContainer {
 	/*padding: 15px;*/
 	margin-bottom: 15px;
+		-webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
 }
 header .itemContainer:first-of-type {
 	margin-top: 10px;
@@ -452,13 +456,18 @@ header .quantityChange i {
 	color: #083776;
 	font-size: 13px;
 }
+header .quantityChange .remove {
+	cursor: pointer;
+}
 header .quantityChange .remove p {
 	font-size: 13.5px;
-
 }
 header .quantityChange .remove i {
 	background: none;
 	color: #fff;
+}
+header .quantityChange .remove i:hover {
+	color: #f8df29;
 }
 header .totalContainer {
 	margin-left: 95px;
@@ -506,7 +515,16 @@ header .buttonBox button:last-of-type:hover {
 	border-color: #fff;
 }*/
 
+header .desktopCart .itemContainer.shrink {
+	transform: scale(.8);
+	opacity: 0;
+}
+
 /*end of desktop cart*/
+
+
+
+
 
 header .cartContainer article {
 	background: #fff;
