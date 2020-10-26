@@ -1,6 +1,6 @@
 * {
 	font-family: 'poppins', sans-serif;
-	color: #fff;
+	color: #eaeaea;
 }
 
 a {
@@ -430,10 +430,13 @@ header .desktopCart h5 {
 }
 header .itemContainer h5 {
 	color: #1979c3;
-	width: fit-content;
+	width: 30px;
+	height: 30px;
 	background: #fff;
+	line-height: 30px;
+	text-align: center;
 	display: inline-block;
-	padding: 5px 10px;
+	/*padding: 5px 10px;*/
 }
 header .quantityChange i {
 	background: #fff;
