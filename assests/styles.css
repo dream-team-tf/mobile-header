@@ -971,8 +971,14 @@ header.fixed nav.open {
   display: flex;
 }
 .halfwidth {
-  background: #fbfbfb;
-  width: 50%;
+  background: #fff;
+  width: calc(50% - .5px);
+}
+.row .halfwidth:first-of-type {
+  margin-right: .5px;
+}
+.row .halfwidth:last-of-type {
+  margin-left: .5px;
 }
 .banner figure {
   height: 500px;
