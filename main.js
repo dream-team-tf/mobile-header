@@ -64,17 +64,20 @@ $(document).mouseup(function(e)
 
 
 // transparent header
-// track when the top of the header passes #bodyContent or number of px from top
-$(window).scroll(function() {
-	if($(document).scrollTop() >= 150 && $(window).width() >= 1050) {
+// check if the current page is lottie.html
+if(window.location.href = 'https://dream-team-tf.github.io/mobile-header/lottie.html') {
 
-		$('header, header:before').addClass('transparent')
-		// $('.headerWrapper, header').css('background', 'none')
-	} else {
-		$('header, header:before').removeClass('transparent')
-		// $('.headerWrapper, header').css('background', '#083776')
-	}
-})
+	$(window).scroll(function() {
+		if($(document).scrollTop() >= 150 && $(window).width() >= 1050) {
+
+			$('header, header:before').addClass('transparent')
+			// $('.headerWrapper, header').css('background', 'none')
+		} else {
+			$('header, header:before').removeClass('transparent')
+			// $('.headerWrapper, header').css('background', '#083776')
+		}
+	});
+}	
 
 
 
