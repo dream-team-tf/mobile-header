@@ -477,6 +477,7 @@ header .totalContainer {
 }
 header .totalContainer h4 {
 	color: #f8df29;
+	font-size: 20px;
 }
 header .cartContainer .totalContainer hr {
 	border: none;
