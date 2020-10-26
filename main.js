@@ -88,7 +88,7 @@ $('.desktopCart .quantityChange i').click(function() {
 		var newValue = parseFloat(oldValue) + 1;
 		var num = $(this).closest('.itemContainer').find('h5.quantity').text(newValue);
 
-	} else {
+	} else if($(this).hasClass('fa-minus')) {
 			var oldValue = $(this).closest('.itemContainer').find('h5.quantity').html(); 
 		if(oldValue > 0) {
 			var newValue = parseFloat(oldValue) - 1;
