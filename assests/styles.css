@@ -523,12 +523,24 @@ header .buttonBox button:last-of-type:hover {
 	background: #1979c3;
 	border-color: #fff;
 }*/
-
 header .desktopCart .itemContainer.shrink {
 	transform: scale(.8);
 	opacity: 0;
 }
-
+header .iconContainer #navCart p.quantity {
+  background: red;
+  width: 20px;
+  height: 20px;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -13px;
+  right: -2px;
+  font-size: 12px;
+  font-weight: 300;
+}
 /*end of desktop cart*/
 
 
@@ -602,6 +614,7 @@ header #navUser {
 header #navCart {
 	margin: 0;
 	font-size: 19px;
+	position: relative;
 }
 header nav {
 	background: none;
