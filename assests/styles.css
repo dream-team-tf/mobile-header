@@ -407,6 +407,8 @@ header .quantityChange .remove {
 }
 header .itemContainer {
 	/*padding: 15px;*/
+	top: -3px;
+	right: -41px;
 	margin-bottom: 15px;
 		-webkit-transition: all 0.1s ease;
     -moz-transition: all 0.1s ease;
