@@ -65,7 +65,7 @@ $(document).mouseup(function(e)
 
 // transparent header
 // check if the current page is lottie.html
-if(document.url.includes('lottie')) {
+if(document.URL.includes('lottie')) {
 
 	$(window).scroll(function() {
 		if($(document).scrollTop() >= 150 && $(window).width() >= 1050) {
