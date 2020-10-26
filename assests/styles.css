@@ -429,6 +429,9 @@ header .itemContainer figure {
 	max-width: 80px;
 	max-height: 80px;
 }
+header .itemContainer figure img {
+	border-radius: 5px;
+}
 header .desktopCart h4,
 header .desktopCart h5 {
 	margin: 0;
