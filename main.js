@@ -65,7 +65,7 @@ $(document).mouseup(function(e)
 
 // transparent header
 // check if the current page is lottie.html
-// if(window.location.pathname = '/mobile-header/lottie.html') {
+if(document.url.includes('https://dream-team-tf.github.io/mobile-header/lottie.html')) {
 
 	$(window).scroll(function() {
 		if($(document).scrollTop() >= 150 && $(window).width() >= 1050) {
@@ -77,7 +77,7 @@ $(document).mouseup(function(e)
 			// $('.headerWrapper, header').css('background', '#083776')
 		}
 	});
-// }	
+}	
 
 
 
