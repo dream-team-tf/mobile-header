@@ -813,7 +813,7 @@ header.fixed nav.open {
 
 /*grid system*/
 .wrapper {
-	border: 3px dashed red;
+	/*border: 3px dashed red;*/
 	box-sizing: border-box;
 }
 .box {
