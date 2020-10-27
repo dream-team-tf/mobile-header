@@ -272,6 +272,7 @@ header .locationContainer i.fa-chevron-down {
 	font-size: 13px;
 	padding-top: 9px;
 	color: #000;
+	pointer-events: none;
 }
 header select::-ms-expand {
     display: none;
