@@ -63,7 +63,7 @@ $(document).mouseup(function(e)
 
 
 // category nav dropdown
-$('header nav a').hover(function() {
+$('header nav a').not('ul.navPhoneLinks a').hover(function() {
 	$(this).css({'color': '#f8df29', 'text-decoration': 'underline', 'background': '#005589', 'padding': '7px'});
 
 	if(!$('.headerWrapper').children().is('#categoryBox')) {
