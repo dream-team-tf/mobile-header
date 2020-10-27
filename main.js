@@ -64,7 +64,7 @@ $(document).mouseup(function(e)
 
 // category nav dropdown
 $('header nav a').not('ul.navPhoneLinks a').hover(function() {
-	$(this).css({'color': '#f8df29', 'text-decoration': 'underline', 'background': '#005589', 'padding': '7px'});
+	$(this).css({'color': '#f8df29', 'text-decoration': 'underline'});
 
 	if(!$('.headerWrapper').children().is('#categoryBox')) {
 		var categoryNav = $(`
@@ -153,15 +153,16 @@ $('header nav a').not('ul.navPhoneLinks a').hover(function() {
 	}
 
 	// conditional for when the user leaves nav a tags
-	$('header nav a').mouseleave(function() {
-		$('header nav a').css({'color': '#eaeaea', 'text-decoration': 'none', 'background': 'unset', 'padding': '7px 7px 7px 0'});
-	});
+	// $('header nav a').mouseleave(function() {
+	// 	$('header nav a').css({'color': '#eaeaea', 'text-decoration': 'none'});
+	// });
+	
 
 	// conditional for when the user leaves the categoryBox
 	$('.headerWrapper #categoryBox').mouseleave(function() {
 		$('.headerWrapper #categoryBox').remove();
 
-		$('header nav a').css({'color': '#eaeaea', 'text-decoration': 'none', 'background': 'unset', 'padding': '7px 7px 7px 0'});
+		$('header nav a').css({'color': '#eaeaea', 'text-decoration': 'none'});
 	});
 });
 
