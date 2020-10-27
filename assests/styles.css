@@ -546,7 +546,48 @@ header .iconContainer #navCart p.quantity {
 
 
 
+/*category hover*/
+header #categoryBox {
+	background: #eaeaea;
+	border: 4px solid #005589;
+	grid-template-columns: 4fr 1fr;
+	padding: 20px;
+}
+header #categoryBox li,
+header #categoryBox h4 {
+	color: #005589;
+	margin: 0;
+}
+header #categoryBox,
+header #categoryBox ul,
+header #categoryBox li:first-of-type {
+	display: grid;
+}
+header #categoryBox ul {
+	grid-template-columns: repeat(4, 1fr);
+	margin-bottom: 35px;
+}
+header #categoryBox ul h4 {
+	font-weight: 700;
+}
+header #categoryBox ul li ul {
+	display: flex;
+	flex-direction: column;
+	padding-left: 50px;
+}
+header #categoryBox ul li ul li {
+	/*padding-left: 50px;*/
+}
+header #categoryBox figure {
+	margin: 0;
+	background: #dadada;
+}
 
+
+
+
+
+/*end of category hover*/
 
 header .cartContainer article {
 	background: #fff;

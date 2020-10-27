@@ -62,6 +62,103 @@ $(document).mouseup(function(e)
 });
 
 
+// nav dropdown
+$('header nav').hover(function() {
+	if(!$('.headerWrapper').children().is('#categoryBox')) {
+		var categoryNav = $(`
+			<div id="categoryBox">
+					<ul>
+						<li>
+							<h4>Dumbbells</h4>
+							<ul>
+								<li>Round</li>
+								<li>Hex</li>
+								<li>Virgin</li>
+								<li>Neoprene</li>
+							</ul>
+						</li>
+						<li>
+							<h4>Kettlebells</h4>
+							<ul>
+								<li>Round</li>
+								<li>Hex</li>
+								<li>Virgin</li>
+								<li>Neoprene</li>
+							</ul>
+						</li>
+						<li>
+							<h4>Dumbbells</h4>
+							<ul>
+								<li>Round</li>
+								<li>Hex</li>
+								<li>Virgin</li>
+								<li>Neoprene</li>
+							</ul>
+						</li>
+						<li>
+							<h4>Kettlebells</h4>
+							<ul>
+								<li>Round</li>
+								<li>Hex</li>
+								<li>Virgin</li>
+								<li>Neoprene</li>
+							</ul>
+						</li>
+						<li>
+							<h4>Dumbbells</h4>
+							<ul>
+								<li>Round</li>
+								<li>Hex</li>
+								<li>Virgin</li>
+								<li>Neoprene</li>
+							</ul>
+						</li>
+						<li>
+							<h4>Kettlebells</h4>
+							<ul>
+								<li>Round</li>
+								<li>Hex</li>
+								<li>Virgin</li>
+								<li>Neoprene</li>
+							</ul>
+						</li>
+						<li>
+							<h4>Dumbbells</h4>
+							<ul>
+								<li>Round</li>
+								<li>Hex</li>
+								<li>Virgin</li>
+								<li>Neoprene</li>
+							</ul>
+						</li>
+						<li>
+							<h4>Kettlebells</h4>
+							<ul>
+								<li>Round</li>
+								<li>Hex</li>
+								<li>Virgin</li>
+								<li>Neoprene</li>
+							</ul>
+						</li>
+					</ul>
+
+					<figure class="imgContainer"></figure>
+				</div>
+
+			`);
+
+		$('.headerWrapper').append(categoryNav);
+	}
+
+	$('.headerWrapper #categoryBox').mouseleave(function() {
+		$('.headerWrapper #categoryBox').remove();
+	});
+});
+
+
+
+
+
 
 // transparent header
 // check if the current page is lottie.html
