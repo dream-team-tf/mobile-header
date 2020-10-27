@@ -772,8 +772,8 @@ header.fixed nav.open {
 
 /*grid system*/
 .wrapper {
-	border: 3px dashed red;
-	/*box-sizing: border-box;*/
+	/*border: 3px dashed red;*/
+	box-sizing: border-box;
 }
 .box {
 	background: #d3d3d3;
