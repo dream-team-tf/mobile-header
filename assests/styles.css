@@ -550,6 +550,7 @@ header #categoryBox {
 	border: 4px solid #005589;
 	grid-template-columns: 4fr 1fr;
 	padding: 20px;
+	width: 100%;
 }
 header #categoryBox li,
 header #categoryBox h4 {

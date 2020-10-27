@@ -66,93 +66,105 @@ $(document).mouseup(function(e)
 $('header nav a').not('ul.navPhoneLinks a').hover(function() {
 	$(this).css({'color': '#f8df29', 'text-decoration': 'underline'});
 
-	if(!$('.headerWrapper').children().is('#categoryBox')) {
-		var categoryNav = $(`
-			<div id="categoryBox">
-					<ul>
-						<li>
-							<h4>Dumbbells</h4>
-							<ul>
-								<li>Round</li>
-								<li>Hex</li>
-								<li>Virgin</li>
-								<li>Neoprene</li>
-							</ul>
-						</li>
-						<li>
-							<h4>Kettlebells</h4>
-							<ul>
-								<li>Round</li>
-								<li>Hex</li>
-								<li>Virgin</li>
-								<li>Neoprene</li>
-							</ul>
-						</li>
-						<li>
-							<h4>Dumbbells</h4>
-							<ul>
-								<li>Round</li>
-								<li>Hex</li>
-								<li>Virgin</li>
-								<li>Neoprene</li>
-							</ul>
-						</li>
-						<li>
-							<h4>Kettlebells</h4>
-							<ul>
-								<li>Round</li>
-								<li>Hex</li>
-								<li>Virgin</li>
-								<li>Neoprene</li>
-							</ul>
-						</li>
-						<li>
-							<h4>Dumbbells</h4>
-							<ul>
-								<li>Round</li>
-								<li>Hex</li>
-								<li>Virgin</li>
-								<li>Neoprene</li>
-							</ul>
-						</li>
-						<li>
-							<h4>Kettlebells</h4>
-							<ul>
-								<li>Round</li>
-								<li>Hex</li>
-								<li>Virgin</li>
-								<li>Neoprene</li>
-							</ul>
-						</li>
-						<li>
-							<h4>Dumbbells</h4>
-							<ul>
-								<li>Round</li>
-								<li>Hex</li>
-								<li>Virgin</li>
-								<li>Neoprene</li>
-							</ul>
-						</li>
-						<li>
-							<h4>Kettlebells</h4>
-							<ul>
-								<li>Round</li>
-								<li>Hex</li>
-								<li>Virgin</li>
-								<li>Neoprene</li>
-							</ul>
-						</li>
-					</ul>
+	var categoryNav = $(`
+		<div id="categoryBox">
+				<ul>
+					<li>
+						<h4>Dumbbells</h4>
+						<ul>
+							<li>Round</li>
+							<li>Hex</li>
+							<li>Virgin</li>
+							<li>Neoprene</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Kettlebells</h4>
+						<ul>
+							<li>Round</li>
+							<li>Hex</li>
+							<li>Virgin</li>
+							<li>Neoprene</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Dumbbells</h4>
+						<ul>
+							<li>Round</li>
+							<li>Hex</li>
+							<li>Virgin</li>
+							<li>Neoprene</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Kettlebells</h4>
+						<ul>
+							<li>Round</li>
+							<li>Hex</li>
+							<li>Virgin</li>
+							<li>Neoprene</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Dumbbells</h4>
+						<ul>
+							<li>Round</li>
+							<li>Hex</li>
+							<li>Virgin</li>
+							<li>Neoprene</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Kettlebells</h4>
+						<ul>
+							<li>Round</li>
+							<li>Hex</li>
+							<li>Virgin</li>
+							<li>Neoprene</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Dumbbells</h4>
+						<ul>
+							<li>Round</li>
+							<li>Hex</li>
+							<li>Virgin</li>
+							<li>Neoprene</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Kettlebells</h4>
+						<ul>
+							<li>Round</li>
+							<li>Hex</li>
+							<li>Virgin</li>
+							<li>Neoprene</li>
+						</ul>
+					</li>
+				</ul>
 
-					<figure class="imgContainer"></figure>
-				</div>
-
-			`);
+				<figure class="imgContainer"></figure>
+			</div>
+		`);
+	
+	// append categoryBox when header isn't in sticky 
+	if(!$('.headerWrapper').children().is('#categoryBox') && !$('header').is('.fixed')) {
 
 			setTimeout(function() {
 			}, 150);
 				$('.headerWrapper').append(categoryNav).hide().slideDown(250);
+
+	// append categoryBox when header is in sticky
+	} else if(!$('.headerWrapper').children().is('#categoryBox') && $('header').is('.fixed')) {
+
+			setTimeout(function() {
+			}, 150);
+				$('.headerWrapper').append(categoryNav).hide().slideDown(250);
+				$('#categoryBox').css({'position': 'absolute', 'top': '91px'})
+
 	}
+
+
 
 	// conditional for when the user leaves nav a tags but not categoryBox
 	// $('header nav a').mouseleave(function() {
