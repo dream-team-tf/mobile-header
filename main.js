@@ -152,6 +152,12 @@ $('header nav a').not('ul.navPhoneLinks a').hover(function() {
 		$('.headerWrapper').append(categoryNav);
 	}
 
+	// conditional for when the user leaves nav a tags
+	$('header nav a').mouseleave(function() {
+		$('header nav a').css({'color': '#eaeaea', 'text-decoration': 'none', 'background': 'unset', 'padding': '7px 7px 7px 0'});
+	});
+
+	// conditional for when the user leaves the categoryBox
 	$('.headerWrapper #categoryBox').mouseleave(function() {
 		$('.headerWrapper #categoryBox').remove();
 
