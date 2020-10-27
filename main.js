@@ -149,18 +149,23 @@ $('header nav a').not('ul.navPhoneLinks a').hover(function() {
 
 			`);
 
-		$('.headerWrapper').append(categoryNav);
+			setTimeout(function() {
+			}, 150);
+				$('.headerWrapper').append(categoryNav).hide().slideDown(250);
 	}
 
-	// conditional for when the user leaves nav a tags
+	// conditional for when the user leaves nav a tags but not categoryBox
 	// $('header nav a').mouseleave(function() {
 	// 	$('header nav a').css({'color': '#eaeaea', 'text-decoration': 'none'});
 	// });
-	
+
 
 	// conditional for when the user leaves the categoryBox
 	$('.headerWrapper #categoryBox').mouseleave(function() {
-		$('.headerWrapper #categoryBox').remove();
+		$('.headerWrapper #categoryBox').slideUp();
+		setTimeout(function() {
+			$('.headerWrapper #categoryBox').remove()
+		},300);
 
 		$('header nav a').css({'color': '#eaeaea', 'text-decoration': 'none'});
 	});
