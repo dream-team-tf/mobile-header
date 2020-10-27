@@ -62,8 +62,8 @@ $(document).mouseup(function(e)
 });
 
 
-// nav dropdown
-$('header nav').hover(function() {
+// category nav dropdown
+$('header nav a').hover(function() {
 	if(!$('.headerWrapper').children().is('#categoryBox')) {
 		var categoryNav = $(`
 			<div id="categoryBox">

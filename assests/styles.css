@@ -581,13 +581,12 @@ header #categoryBox figure {
 	background: #dadada;
 }
 
-<<<<<<< HEAD
+
 
 
 /*end of category hover*/
 
-=======
->>>>>>> 09e8cf51b00c5052d8b279c7a30e4fa73845c5fb
+
 header .cartContainer article {
 	background: #fff;
 	border: 1px solid #083776;
@@ -696,6 +695,7 @@ header nav ul li a {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  padding: 7px 7px 7px 0;
 }
 header nav ul li a:hover,
 header nav ul li:hover {
