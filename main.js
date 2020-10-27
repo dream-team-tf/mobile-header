@@ -64,6 +64,8 @@ $(document).mouseup(function(e)
 
 // category nav dropdown
 $('header nav a').hover(function() {
+	$(this).css({'color': '#f8df29', 'text-decoration': 'underline'});
+
 	if(!$('.headerWrapper').children().is('#categoryBox')) {
 		var categoryNav = $(`
 			<div id="categoryBox">
@@ -152,9 +154,10 @@ $('header nav a').hover(function() {
 
 	$('.headerWrapper #categoryBox').mouseleave(function() {
 		$('.headerWrapper #categoryBox').remove();
+
+		$('header nav a').css({'color': '#eaeaea', 'text-decoration': 'none'});
 	});
 });
-
 
 
 
