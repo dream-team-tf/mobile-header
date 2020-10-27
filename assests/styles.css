@@ -1026,10 +1026,10 @@ header.fixed nav.open {
     transition: all 0.3s ease;
 }
 .banner article .text {
-	background: linear-gradient(to top, black, transparent);
+  background: linear-gradient(to top, black, transparent);
   padding: 0 20px;
   position: absolute;
-    bottom: 0;
+  bottom: 0;
   width: 100%;
 }
 .banner article h3 {
@@ -1039,38 +1039,40 @@ header.fixed nav.open {
   max-width: 300px;
 }
 .banner article p {
-	color: #fff;
+  color: #fff;
   margin: 5px 0 0;
 }
 .banner .bottom-info button, .banner .bottom-info p, .banner .bottom-info h3 {
-	display: inline-block;
-	margin: 0;
+  display: inline-block;
+  margin: 0;
 }
 .banner .bottom-info {
-	align-items: center;
-	display: inline-flex;
+  align-items: center;
+  display: inline-flex;
   padding: 20px 0;
   width: calc(100% - 40px);
 }
 .banner .bottom-info button {
-	background: #626365;
-	border: none;
-	border-radius: 5px;
-	line-height: 1;
+  background: #626365;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  line-height: 1;
   margin-right: 20px;
   padding: 10px 20px;
 }
 .banner .bottom-info h3 {
-	color: #f00;
-	float: right;
-	font-size: 48px;
-	margin-left: auto;
+  color: #f00;
+  float: right;
+  font-size: 48px;
+  margin-left: auto;
 }
 .banner .bottom-info a {
-	color: #fff;
-	cursor: pointer;
-	margin: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin: 5px;
 }
 .banner article.active {
-	opacity: 1;
+  opacity: 1;
+  z-index: 1;
 }
