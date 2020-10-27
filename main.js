@@ -94,10 +94,23 @@ $('.desktopCart .quantityChange i').click(function() {
 
 		// price total function
 		var priceOfItem = $('.totalContainer h4.total').closest('.desktopCart').find('.itemInfo h4.price');
+		var newPrice = [];
+		// var prices = priceOfItem.map(function() {
+		// 	var price = parseFloat($(this).html().replace('$', ''));
 
+		// 	for(i=0; i<price.length; i++) {
+		// 		var quantity = price[i]*parseFloat($('.itemInfo .quantity')[i].innerHTML)
+		// 		//push new values in
+		// 		newPrice.push(quantity)
+
+		// 		// return prices.push(quantity)
+		// 	}
+		// 		// return quantity;
+		// });
 		var prices = priceOfItem.map(function() {
 			return $(this).html().replace('$', '');
 		});
+		console.log(newPrice)
 		var subTotal = 0;
 		for(i=0; i<prices.length; i++) {
 			subTotal += parseFloat(prices[i]);
@@ -111,16 +124,6 @@ $('.desktopCart .quantityChange i').click(function() {
 			var num = $(this).closest('.itemContainer').find('h5.quantity').text(newValue);
 
 			// price total function
-			var priceOfItem = $('.totalContainer h4.total').closest('.desktopCart').find('.itemInfo h4.price');
-
-			var prices = priceOfItem.map(function() {
-				return $(this).html().replace('$', '');
-			});
-			var subTotal = 0;
-			for(i=0; i<prices.length; i++) {
-				subTotal += parseFloat(prices[i]);
-			}
-			$('.totalContainer h4.total').text(subTotal);
 
 		} else {
 			newValue = 0;
