@@ -174,10 +174,10 @@ $('header nav a').not('ul.navPhoneLinks a').hover(function() {
 
 	// conditional for when the user leaves the categoryBox
 	$('.headerWrapper #categoryBox').mouseleave(function() {
-		$('.headerWrapper #categoryBox').slideUp();
+		$('.headerWrapper #categoryBox').slideUp('fast');
 		setTimeout(function() {
 			$('.headerWrapper #categoryBox').remove()
-		},300);
+		},550);
 
 		$('header nav a').css({'color': '#eaeaea', 'text-decoration': 'none'});
 	});
