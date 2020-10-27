@@ -673,6 +673,7 @@ header nav {
 }
 header nav ul {
 	display: inline-block;
+	line-height: 1.2;
 	width: auto;
 		max-width: 100%;
 }
