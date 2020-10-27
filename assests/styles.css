@@ -77,7 +77,7 @@ p {
 }
 
 header {
-	/*background: #083776;*/
+	background: #083776;
 	height: 80px;
 	position: fixed;
 		top: 0;
@@ -85,7 +85,6 @@ header {
 	z-index: 100;
 }
 header .headerWrapper {
-	/*background: #083776;*/
 	padding: 10px 0;
 	position: absolute;
 		top: 0;
@@ -239,6 +238,20 @@ header .cartContainer .phoneContainer a {
 header .cartContainer .phoneContainer i {
 	display: none;
 }
+header .iconContainer #navCart p.quantity {
+  background: red;
+  width: 20px;
+  height: 20px;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  right: 5px;
+  font-size: 12px;
+  font-weight: 300;
+}
 header .locationContainer {
   display: inline-block;
 	margin-top: 10px;
@@ -295,6 +308,7 @@ header, header #navHam, header .logo, header .searchContainer, header .locationC
 		transition: all 0.1s ease;
 }
 header {
+	background: none;
 	height: 96px;
 	margin: 0 auto;
 	left: 0;
@@ -528,23 +542,7 @@ header .desktopCart .itemContainer.shrink {
 	transform: scale(.8);
 	opacity: 0;
 }
-header .iconContainer #navCart p.quantity {
-  background: red;
-  width: 20px;
-  height: 20px;
-  color: white;
-  text-align: center;
-  line-height: 20px;
-  border-radius: 50%;
-  position: absolute;
-  top: -13px;
-  right: -2px;
-  font-size: 12px;
-  font-weight: 300;
-}
 /*end of desktop cart*/
-
-
 
 /*category hover*/
 header #categoryBox {
@@ -583,10 +581,13 @@ header #categoryBox figure {
 	background: #dadada;
 }
 
+<<<<<<< HEAD
 
 
 /*end of category hover*/
 
+=======
+>>>>>>> 09e8cf51b00c5052d8b279c7a30e4fa73845c5fb
 header .cartContainer article {
 	background: #fff;
 	border: 1px solid #083776;
@@ -637,6 +638,7 @@ header label[for="location"] i:hover {
 }
 header .iconContainer {
 	/*margin-top: 0;*/
+	margin-right: 12px;
 }
 header .iconContainer .fas {
 	padding: 3px;
@@ -655,6 +657,10 @@ header #navCart {
 	margin: 0;
 	font-size: 19px;
 	position: relative;
+}
+header .iconContainer #navCart p.quantity {
+  top: -21px;
+  right: -7px;
 }
 header nav {
 	background: none;
@@ -758,7 +764,7 @@ header .locationContainer i.fa-chevron-down {
 }
 }
 
-@media screen and (min-width: 1475px) {
+@media screen and (min-width: 1440px) {
 header .iconContainer .fas {
 	padding: 6px;
 	font-size: 17px;
@@ -1032,6 +1038,7 @@ header.fixed nav.open {
   background: #000;
   display: flex;
   padding: 0 1px 1px;
+  width: 100%;
 }
 .halfwidth {
   background: #fff;
@@ -1051,7 +1058,7 @@ header.fixed nav.open {
 	width: 100%;
 }
 .banner article {
-	max-height: 500px;
+	height: 500px;
 	overflow: hidden;
   position: absolute;
   width: 100%;
@@ -1064,12 +1071,16 @@ header.fixed nav.open {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+.banner article img {
+  object-fit: cover;
+  object-position: top;
+}
 .banner article .text {
   background: linear-gradient(to top, black, transparent);
   padding: 0 20px;
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: calc(100% - 40px);
 }
 .banner article h3 {
   font-size: 32px;
